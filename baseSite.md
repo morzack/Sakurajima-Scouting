@@ -16,3 +16,8 @@ I'd reccomend pairing the OPR data with qualitative data that determines what it
 
 When interpreting the score graph the easiest thing to look at is the red trendline, as that can show team performance as matches progress.
 Obviously a positive slope is good, and any massive dips should be recorded and checked by looking at the OPR.
+
+The team skill breakdown section will be extremely useful when it comes down to picking teams and seeing what they are capable of doing.
+At the moment the only things that will be considered automatically are the climb level and opr.
+I don't think that there are any other things that can be automatically determined by just using the TBA API yet.
+Sakurajima will probably calculate the score achieved in individual categories at some point using similar math to OPR, but that's not happening yet.
