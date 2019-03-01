@@ -1,3 +1,6 @@
+# secret file that includes things like json key
+secret.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
