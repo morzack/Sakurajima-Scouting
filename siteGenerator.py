@@ -20,15 +20,15 @@ class SiteGenerator:
             
             # calculate the best teams
             siteFile.write("\n\n## At a Glance")
-            siteFile.write("\n\n### Top OPR Teams\n")
+            siteFile.write("\n\n### All teams with OPR\n")
             
-            stringTranslator = str.maketrans('', '', string.punctuation)
+            stringTranslator = str.maketrans('', '', string.punctuation.replace("-", ""))
 
             teamOprs = []
             for teamKey in self.grapher.teamKeys:
                 if teamKey in self.grapher.oprs['oprs']:
                     teamOprs.append([round(self.grapher.oprs['oprs'][teamKey], 4), "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']), teamKey])
-            for opr in sorted(teamOprs)[::-1]:
+            for opr in teamOprs:
                 siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0]))
             
             # obtain the average climb level for each team
@@ -67,7 +67,7 @@ class SiteGenerator:
                 highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
                 lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
                 highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
-                siteFile.write("\n{} | {} | {} | {} | {} | {} | {}".format(opr[1], opr[0], lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
+                siteFile.write("\n[Team {}](#{}) | {} | {} | {} | {} | {} | {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0], lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
 
             # then add images and opr
             siteFile.write("\n\n## In depth")

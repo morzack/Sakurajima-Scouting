@@ -24,141 +24,141 @@ Sakurajima will probably calculate the score achieved in individual categories a
 
 ## At a Glance
 
-### Top OPR Teams
+### All teams with OPR
 
-- [Team 7152: Owltonomous](#7152-owltonomous), 42.8253
-- [Team 4451: ROBOTZ Garage](#4451-robotz-garage), 41.4329
-- [Team 4020: Cyber Tribe](#4020-cyber-tribe), 36.4247
-- [Team 86: Team Resistance](#86-team-resistance), 31.4079
+- [Team 1051: Technical Terminators](#1051-technical-terminators), 14.3237
+- [Team 108: SigmaC@T Robotics Team](#108-sigmact-robotics-team), 12.4808
+- [Team 1287: Aluminum Assault](#1287-aluminum-assault), 19.351
+- [Team 1293: Pandamaniacs](#1293-pandamaniacs), 19.4652
+- [Team 1369: Minotaur](#1369-minotaur), 21.6743
+- [Team 1398: Robo-Raiders](#1398-robo-raiders), 12.8807
+- [Team 1539: Clover Robotics](#1539-clover-robotics), 22.7852
+- [Team 1553: KC Robotics Team](#1553-kc-robotics-team), 12.1289
+- [Team 1758: Technomancers](#1758-technomancers), 2.1857
+- [Team 1902: Exploding Bacon](#1902-exploding-bacon), 21.796
+- [Team 21: ComBBAT](#21-combbat), 16.2536
+- [Team 2187: Team Volt](#2187-team-volt), 5.2528
+- [Team 2393: Robotichauns](#2393-robotichauns), 18.887
+- [Team 2614: Mountaineer Area RoboticS (MARS)](#2614-mountaineer-area-robotics-mars), 0.8525
+- [Team 263: Aftershock](#263-aftershock), 9.3199
+- [Team 281: The GreenVillains](#281-the-greenvillains), 19.7261
+- [Team 2815: Blue Devil Mechanics](#2815-blue-devil-mechanics), 9.1789
+- [Team 283: The Generals](#283-the-generals), -9.0218
+- [Team 3140: Flagship](#3140-flagship), 11.7757
+- [Team 342: Burning Magnetos](#342-burning-magnetos), 17.4432
+- [Team 3489: Category 5](#3489-category-5), 20.8803
+- [Team 3490: Viper Drive](#3490-viper-drive), -2.998
+- [Team 3651: TRIBE](#3651-tribe), -7.1259
 - [Team 379: The RoboCats](#379-the-robocats), 26.7089
 - [Team 3824: HVA RoHAWKtics](#3824-hva-rohawktics), 25.7668
-- [Team 7072: O.G.R.E. (Opelika's Greatest Robotics Engineers)](#7072-ogre-opelikas-greatest-robotics-engineers), 24.2666
-- [Team 1539: Clover Robotics](#1539-clover-robotics), 22.7852
-- [Team 1902: Exploding Bacon](#1902-exploding-bacon), 21.796
-- [Team 1369: Minotaur](#1369-minotaur), 21.6743
-- [Team 3489: Category 5](#3489-category-5), 20.8803
-- [Team 5472: Stallion Robotics](#5472-stallion-robotics), 20.1448
-- [Team 4074: Shark Bytes](#4074-shark-bytes), 19.7443
-- [Team 281: The GreenVillains](#281-the-greenvillains), 19.7261
-- [Team 5410: Eaglebotics](#5410-eaglebotics), 19.4899
-- [Team 1293: Pandamaniacs](#1293-pandamaniacs), 19.4652
-- [Team 1287: Aluminum Assault](#1287-aluminum-assault), 19.351
-- [Team 4823: Metal Manes](#4823-metal-manes), 19.2216
-- [Team 7107: Blazer Robotics](#7107-blazer-robotics), 19.2016
-- [Team 2393: Robotichauns](#2393-robotichauns), 18.887
-- [Team 342: Burning Magnetos](#342-burning-magnetos), 17.4432
-- [Team 21: ComBBAT](#21-combbat), 16.2536
-- [Team 4965: FIRE](#4965-fire), 16.229
-- [Team 5317: @RedhawkRobotics](#5317-redhawkrobotics), 15.4677
-- [Team 4504: B. C. Robotics](#4504-b-c-robotics), 14.5176
-- [Team 1051: Technical Terminators](#1051-technical-terminators), 14.3237
-- [Team 4748: Bulldog Autobots](#4748-bulldog-autobots), 13.8231
-- [Team 4083: The Iron Wolverines](#4083-the-iron-wolverines), 13.1762
-- [Team 7409: GLOW](#7409-glow), 13.0037
-- [Team 1398: Robo-Raiders](#1398-roboraiders), 12.8807
-- [Team 108: SigmaC@T Robotics Team](#108-sigmact-robotics-team), 12.4808
-- [Team 1553: KC Robotics Team](#1553-kc-robotics-team), 12.1289
-- [Team 4582: Robohawks ](#4582-robohawks), 11.998
-- [Team 4005: Hostile Gato Robotics](#4005-hostile-gato-robotics), 11.7908
-- [Team 3140: Flagship](#3140-flagship), 11.7757
-- [Team 263: Aftershock](#263-aftershock), 9.3199
-- [Team 2815: Blue Devil Mechanics](#2815-blue-devil-mechanics), 9.1789
-- [Team 6366: RAM Rodz Robotics](#6366-ram-rodz-robotics), 8.3637
-- [Team 5130: Undercogs](#5130-undercogs), 8.2556
-- [Team 900: The Zebracorns](#900-the-zebracorns), 7.9418
-- [Team 4243: Excelsior!](#4243-excelsior), 7.8331
-- [Team 6167: CB Bearbots](#6167-cb-bearbots), 7.5202
-- [Team 5949: TechGarage](#5949-techgarage), 6.1892
-- [Team 7085: Waccamaw High School](#7085-waccamaw-high-school), 5.9615
-- [Team 5022: Rat Rod Robotics](#5022-rat-rod-robotics), 5.5213
-- [Team 2187: Team Volt](#2187-team-volt), 5.2528
-- [Team 7489: Milagro Center](#7489-milagro-center), 5.0804
-- [Team 5777: Static Storm](#5777-static-storm), 4.9727
-- [Team 6961: SIbots](#6961-sibots), 2.4021
-- [Team 1758: Technomancers](#1758-technomancers), 2.1857
-- [Team 2614: Mountaineer Area RoboticS (MARS)](#2614-mountaineer-area-robotics-mars), 0.8525
-- [Team 4187: RoboRams](#4187-roborams), -1.1987
-- [Team 5327: Griffin Robotics](#5327-griffin-robotics), -1.7101
 - [Team 3976: Electric Hornets](#3976-electric-hornets), -2.6233
-- [Team 3490: Viper Drive](#3490-viper-drive), -2.998
-- [Team 4267: Brave Bots](#4267-brave-bots), -3.9756
-- [Team 5063: BuzzBots](#5063-buzzbots), -4.0229
-- [Team 4075: Robo Tigers](#4075-robo-tigers), -4.4828
-- [Team 6626: Robohana](#6626-robohana), -5.1479
-- [Team 4847: Techno-Logic Trojans](#4847-technologic-trojans), -6.5878
-- [Team 3651: TRIBE](#3651-tribe), -7.1259
-- [Team 283: The Generals](#283-the-generals), -9.0218
-- [Team 6222: Flying Tigers](#6222-flying-tigers), -14.6793
+- [Team 4005: Hostile Gato Robotics](#4005-hostile-gato-robotics), 11.7908
+- [Team 4020: Cyber Tribe](#4020-cyber-tribe), 36.4247
 - [Team 4073: Robo Katz](#4073-robo-katz), -21.026
+- [Team 4074: Shark Bytes](#4074-shark-bytes), 19.7443
+- [Team 4075: Robo Tigers](#4075-robo-tigers), -4.4828
+- [Team 4083: The Iron Wolverines](#4083-the-iron-wolverines), 13.1762
+- [Team 4187: RoboRams](#4187-roborams), -1.1987
+- [Team 4243: Excelsior!](#4243-excelsior), 7.8331
+- [Team 4267: Brave Bots](#4267-brave-bots), -3.9756
+- [Team 4451: ROBOTZ Garage](#4451-robotz-garage), 41.4329
+- [Team 4504: B. C. Robotics](#4504-b-c-robotics), 14.5176
+- [Team 4582: Robohawks ](#4582-robohawks), 11.998
+- [Team 4748: Bulldog Autobots](#4748-bulldog-autobots), 13.8231
+- [Team 4823: Metal Manes](#4823-metal-manes), 19.2216
+- [Team 4847: Techno-Logic Trojans](#4847-techno-logic-trojans), -6.5878
+- [Team 4965: FIRE](#4965-fire), 16.229
+- [Team 5022: Rat Rod Robotics](#5022-rat-rod-robotics), 5.5213
+- [Team 5063: BuzzBots](#5063-buzzbots), -4.0229
+- [Team 5130: Undercogs](#5130-undercogs), 8.2556
+- [Team 5317: @RedhawkRobotics](#5317-redhawkrobotics), 15.4677
+- [Team 5327: Griffin Robotics](#5327-griffin-robotics), -1.7101
+- [Team 5410: Eaglebotics](#5410-eaglebotics), 19.4899
+- [Team 5472: Stallion Robotics](#5472-stallion-robotics), 20.1448
+- [Team 5777: Static Storm](#5777-static-storm), 4.9727
+- [Team 5949: TechGarage](#5949-techgarage), 6.1892
+- [Team 6167: CB Bearbots](#6167-cb-bearbots), 7.5202
+- [Team 6222: Flying Tigers](#6222-flying-tigers), -14.6793
+- [Team 6366: RAM Rodz Robotics](#6366-ram-rodz-robotics), 8.3637
+- [Team 6626: Robohana](#6626-robohana), -5.1479
+- [Team 6961: SIbots](#6961-sibots), 2.4021
+- [Team 7072: O.G.R.E. (Opelika's Greatest Robotics Engineers)](#7072-ogre-opelikas-greatest-robotics-engineers), 24.2666
+- [Team 7085: Waccamaw High School](#7085-waccamaw-high-school), 5.9615
+- [Team 7107: Blazer Robotics](#7107-blazer-robotics), 19.2016
+- [Team 7152: Owltonomous](#7152-owltonomous), 42.8253
+- [Team 7409: GLOW](#7409-glow), 13.0037
+- [Team 7489: Milagro Center](#7489-milagro-center), 5.0804
+- [Team 86: Team Resistance](#86-team-resistance), 31.4079
+- [Team 900: The Zebracorns](#900-the-zebracorns), 7.9418
 
 ### Team skill breakdown
 
 team | opr | low hatch | low cargo | high hatch | high cargo | average climb level
 --- | --- | :---: | :---: | :---: | :---: | :---:
-7152: Owltonomous | 42.8253 |  |  |  |  | 1.25
-4451: ROBOTZ Garage | 41.4329 |  |  |  |  | 2.0
-4020: Cyber Tribe | 36.4247 |  |  |  |  | 3.0
-86: Team Resistance | 31.4079 |  |  |  |  | 1.0
-379: The RoboCats | 26.7089 |  |  |  |  | 1.75
-3824: HVA RoHAWKtics | 25.7668 |  |  |  |  | 1.0
-7072: O.G.R.E. (Opelika's Greatest Robotics Engineers) | 24.2666 |  |  |  |  | 1.25
-1539: Clover Robotics | 22.7852 |  |  |  |  | 0.5
-1902: Exploding Bacon | 21.796 |  |  |  |  | 1.0
-1369: Minotaur | 21.6743 |  |  |  |  | 1.75
-3489: Category 5 | 20.8803 |  |  |  |  | 0.5
-5472: Stallion Robotics | 20.1448 |  |  |  |  | 1.0
-4074: Shark Bytes | 19.7443 |  |  |  |  | 0.5
-281: The GreenVillains | 19.7261 |  |  |  |  | 2.333
-5410: Eaglebotics | 19.4899 |  |  |  |  | 1.5
-1293: Pandamaniacs | 19.4652 |  |  |  |  | 1.0
-1287: Aluminum Assault | 19.351 |  |  |  |  | 1.0
-4823: Metal Manes | 19.2216 |  |  |  |  | 1.0
-7107: Blazer Robotics | 19.2016 |  |  |  |  | 1.0
-2393: Robotichauns | 18.887 |  |  |  |  | 2.0
-342: Burning Magnetos | 17.4432 |  |  |  |  | 1.0
-21: ComBBAT | 16.2536 |  |  |  |  | 1.75
-4965: FIRE | 16.229 |  |  |  |  | 0.75
-5317: @RedhawkRobotics | 15.4677 |  |  |  |  | 0.75
-4504: B. C. Robotics | 14.5176 |  |  |  |  | 0.5
-1051: Technical Terminators | 14.3237 |  |  |  |  | 1.5
-4748: Bulldog Autobots | 13.8231 |  |  |  |  | 0.5
-4083: The Iron Wolverines | 13.1762 |  |  |  |  | 0.667
-7409: GLOW | 13.0037 |  |  |  |  | 0.5
-1398: Robo-Raiders | 12.8807 |  |  |  |  | 0.25
-108: SigmaC@T Robotics Team | 12.4808 |  |  |  |  | 2.0
-1553: KC Robotics Team | 12.1289 |  |  |  |  | 0.75
-4582: Robohawks  | 11.998 |  |  |  |  | 0.5
-4005: Hostile Gato Robotics | 11.7908 |  |  |  |  | 0.5
-3140: Flagship | 11.7757 |  |  |  |  | 0.5
-263: Aftershock | 9.3199 |  |  |  |  | 1.333
-2815: Blue Devil Mechanics | 9.1789 |  |  |  |  | 1.0
-6366: RAM Rodz Robotics | 8.3637 |  |  |  |  | 1.25
-5130: Undercogs | 8.2556 |  |  |  |  | 0.333
-900: The Zebracorns | 7.9418 | X | X |  |  | 0.75
-4243: Excelsior! | 7.8331 |  |  |  |  | 0.25
-6167: CB Bearbots | 7.5202 |  |  |  |  | 0.75
-5949: TechGarage | 6.1892 |  |  |  |  | 0.5
-7085: Waccamaw High School | 5.9615 |  |  |  |  | 1.0
-5022: Rat Rod Robotics | 5.5213 |  |  |  |  | 0.75
-2187: Team Volt | 5.2528 |  |  |  |  | 0.75
-7489: Milagro Center | 5.0804 |  |  |  |  | 0.0
-5777: Static Storm | 4.9727 |  |  |  |  | 0.5
-6961: SIbots | 2.4021 |  |  |  |  | 0.5
-1758: Technomancers | 2.1857 |  |  |  |  | 0.25
-2614: Mountaineer Area RoboticS (MARS) | 0.8525 |  |  |  |  | 1.0
-4187: RoboRams | -1.1987 |  |  |  |  | 0.0
-5327: Griffin Robotics | -1.7101 |  |  |  |  | 0.5
-3976: Electric Hornets | -2.6233 |  |  |  |  | 1.0
-3490: Viper Drive | -2.998 |  |  |  |  | 1.667
-4267: Brave Bots | -3.9756 |  |  |  |  | 0.0
-5063: BuzzBots | -4.0229 |  |  |  |  | 0.333
-4075: Robo Tigers | -4.4828 |  |  |  |  | 1.0
-6626: Robohana | -5.1479 |  |  |  |  | 0.667
-4847: Techno-Logic Trojans | -6.5878 |  |  |  |  | 0.0
-3651: TRIBE | -7.1259 |  |  |  |  | 0.75
-283: The Generals | -9.0218 |  |  |  |  | 0.5
-6222: Flying Tigers | -14.6793 |  |  |  |  | 0.333
-4073: Robo Katz | -21.026 |  |  |  |  | 1.0
+[Team 7152: Owltonomous](#7152-owltonomous) | 42.8253 |  |  |  |  | 1.25
+[Team 4451: ROBOTZ Garage](#4451-robotz-garage) | 41.4329 |  |  |  |  | 2.0
+[Team 4020: Cyber Tribe](#4020-cyber-tribe) | 36.4247 |  |  |  |  | 3.0
+[Team 86: Team Resistance](#86-team-resistance) | 31.4079 |  |  |  |  | 0.75
+[Team 379: The RoboCats](#379-the-robocats) | 26.7089 |  |  |  |  | 1.75
+[Team 3824: HVA RoHAWKtics](#3824-hva-rohawktics) | 25.7668 |  |  |  |  | 1.0
+[Team 7072: O.G.R.E. (Opelika's Greatest Robotics Engineers)](#7072-ogre-opelikas-greatest-robotics-engineers) | 24.2666 |  |  |  |  | 1.25
+[Team 1539: Clover Robotics](#1539-clover-robotics) | 22.7852 |  |  |  |  | 0.5
+[Team 1902: Exploding Bacon](#1902-exploding-bacon) | 21.796 |  |  |  |  | 1.0
+[Team 1369: Minotaur](#1369-minotaur) | 21.6743 |  |  |  |  | 1.75
+[Team 3489: Category 5](#3489-category-5) | 20.8803 |  |  |  |  | 0.5
+[Team 5472: Stallion Robotics](#5472-stallion-robotics) | 20.1448 |  |  |  |  | 1.0
+[Team 4074: Shark Bytes](#4074-shark-bytes) | 19.7443 |  |  |  |  | 0.5
+[Team 281: The GreenVillains](#281-the-greenvillains) | 19.7261 |  |  |  |  | 2.333
+[Team 5410: Eaglebotics](#5410-eaglebotics) | 19.4899 |  |  |  |  | 1.5
+[Team 1293: Pandamaniacs](#1293-pandamaniacs) | 19.4652 |  |  |  |  | 1.0
+[Team 1287: Aluminum Assault](#1287-aluminum-assault) | 19.351 |  |  |  |  | 1.0
+[Team 4823: Metal Manes](#4823-metal-manes) | 19.2216 |  |  |  |  | 1.0
+[Team 7107: Blazer Robotics](#7107-blazer-robotics) | 19.2016 |  |  |  |  | 1.0
+[Team 2393: Robotichauns](#2393-robotichauns) | 18.887 |  |  |  |  | 2.0
+[Team 342: Burning Magnetos](#342-burning-magnetos) | 17.4432 |  |  |  |  | 1.0
+[Team 21: ComBBAT](#21-combbat) | 16.2536 |  |  |  |  | 1.75
+[Team 4965: FIRE](#4965-fire) | 16.229 |  |  |  |  | 0.75
+[Team 5317: @RedhawkRobotics](#5317-redhawkrobotics) | 15.4677 |  |  |  |  | 0.75
+[Team 4504: B. C. Robotics](#4504-b-c-robotics) | 14.5176 |  |  |  |  | 0.5
+[Team 1051: Technical Terminators](#1051-technical-terminators) | 14.3237 |  |  |  |  | 1.5
+[Team 4748: Bulldog Autobots](#4748-bulldog-autobots) | 13.8231 |  |  |  |  | 0.5
+[Team 4083: The Iron Wolverines](#4083-the-iron-wolverines) | 13.1762 |  |  |  |  | 0.667
+[Team 7409: GLOW](#7409-glow) | 13.0037 |  |  |  |  | 0.5
+[Team 1398: Robo-Raiders](#1398-robo-raiders) | 12.8807 |  |  |  |  | 0.25
+[Team 108: SigmaC@T Robotics Team](#108-sigmact-robotics-team) | 12.4808 |  |  |  |  | 2.0
+[Team 1553: KC Robotics Team](#1553-kc-robotics-team) | 12.1289 |  |  |  |  | 0.75
+[Team 4582: Robohawks ](#4582-robohawks) | 11.998 |  |  |  |  | 0.5
+[Team 4005: Hostile Gato Robotics](#4005-hostile-gato-robotics) | 11.7908 |  |  |  |  | 0.5
+[Team 3140: Flagship](#3140-flagship) | 11.7757 |  |  |  |  | 0.5
+[Team 263: Aftershock](#263-aftershock) | 9.3199 |  |  |  |  | 1.0
+[Team 2815: Blue Devil Mechanics](#2815-blue-devil-mechanics) | 9.1789 |  |  |  |  | 1.0
+[Team 6366: RAM Rodz Robotics](#6366-ram-rodz-robotics) | 8.3637 |  |  |  |  | 1.25
+[Team 5130: Undercogs](#5130-undercogs) | 8.2556 |  |  |  |  | 0.333
+[Team 900: The Zebracorns](#900-the-zebracorns) | 7.9418 | X | X |  |  | 0.75
+[Team 4243: Excelsior!](#4243-excelsior) | 7.8331 |  |  |  |  | 0.25
+[Team 6167: CB Bearbots](#6167-cb-bearbots) | 7.5202 |  |  |  |  | 0.75
+[Team 5949: TechGarage](#5949-techgarage) | 6.1892 |  |  |  |  | 0.5
+[Team 7085: Waccamaw High School](#7085-waccamaw-high-school) | 5.9615 |  |  |  |  | 1.0
+[Team 5022: Rat Rod Robotics](#5022-rat-rod-robotics) | 5.5213 |  |  |  |  | 0.75
+[Team 2187: Team Volt](#2187-team-volt) | 5.2528 |  |  |  |  | 0.75
+[Team 7489: Milagro Center](#7489-milagro-center) | 5.0804 |  |  |  |  | 0.0
+[Team 5777: Static Storm](#5777-static-storm) | 4.9727 |  |  |  |  | 0.5
+[Team 6961: SIbots](#6961-sibots) | 2.4021 |  |  |  |  | 0.5
+[Team 1758: Technomancers](#1758-technomancers) | 2.1857 |  |  |  |  | 0.25
+[Team 2614: Mountaineer Area RoboticS (MARS)](#2614-mountaineer-area-robotics-mars) | 0.8525 |  |  |  |  | 1.0
+[Team 4187: RoboRams](#4187-roborams) | -1.1987 |  |  |  |  | 0.0
+[Team 5327: Griffin Robotics](#5327-griffin-robotics) | -1.7101 |  |  |  |  | 0.5
+[Team 3976: Electric Hornets](#3976-electric-hornets) | -2.6233 |  |  |  |  | 1.0
+[Team 3490: Viper Drive](#3490-viper-drive) | -2.998 |  |  |  |  | 1.667
+[Team 4267: Brave Bots](#4267-brave-bots) | -3.9756 |  |  |  |  | 0.25
+[Team 5063: BuzzBots](#5063-buzzbots) | -4.0229 |  |  |  |  | 0.333
+[Team 4075: Robo Tigers](#4075-robo-tigers) | -4.4828 |  |  |  |  | 1.0
+[Team 6626: Robohana](#6626-robohana) | -5.1479 |  |  |  |  | 0.667
+[Team 4847: Techno-Logic Trojans](#4847-techno-logic-trojans) | -6.5878 |  |  |  |  | 0.0
+[Team 3651: TRIBE](#3651-tribe) | -7.1259 |  |  |  |  | 0.75
+[Team 283: The Generals](#283-the-generals) | -9.0218 |  |  |  |  | 0.5
+[Team 6222: Flying Tigers](#6222-flying-tigers) | -14.6793 |  |  |  |  | 0.75
+[Team 4073: Robo Katz](#4073-robo-katz) | -21.026 |  |  |  |  | 1.5
 
 ## In depth
 
@@ -366,7 +366,7 @@ team | opr | low hatch | low cargo | high hatch | high cargo | average climb lev
 
 | low hatch | low cargo | high hatch | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 1.333 |
+|  |  |  |  | 1.0 |
 
 ![263 scores across all recorded matches](images/frc263.png)
 
@@ -562,7 +562,7 @@ team | opr | low hatch | low cargo | high hatch | high cargo | average climb lev
 
 | low hatch | low cargo | high hatch | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 1.0 |
+|  |  |  |  | 1.5 |
 
 ![4073 scores across all recorded matches](images/frc4073.png)
 
@@ -646,7 +646,7 @@ team | opr | low hatch | low cargo | high hatch | high cargo | average climb lev
 
 | low hatch | low cargo | high hatch | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.0 |
+|  |  |  |  | 0.25 |
 
 ![4267 scores across all recorded matches](images/frc4267.png)
 
@@ -898,7 +898,7 @@ team | opr | low hatch | low cargo | high hatch | high cargo | average climb lev
 
 | low hatch | low cargo | high hatch | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.333 |
+|  |  |  |  | 0.75 |
 
 ![6222 scores across all recorded matches](images/frc6222.png)
 
@@ -1038,7 +1038,7 @@ team | opr | low hatch | low cargo | high hatch | high cargo | average climb lev
 
 | low hatch | low cargo | high hatch | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 1.0 |
+|  |  |  |  | 0.75 |
 
 ![86 scores across all recorded matches](images/frc86.png)
 
