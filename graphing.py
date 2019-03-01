@@ -6,7 +6,7 @@ import json
 import configuration
 
 class EventGrapher:
-    def __init__(self, event, year=2019):
+    def __init__(self, event=configuration.defaultevent, year=configuration.year):
         jsonFile = open('secret.json', 'r')
         secretJson = json.load(jsonFile)
         jsonFile.close()
@@ -17,6 +17,7 @@ class EventGrapher:
         self.year = year
         self.matches = self.tba.event_matches(self.event)
         self.teamKeys = self.tba.event_teams(self.event, keys=True)
+        self.oprs = self.tba.event_oprs(self.event)
 
     def graphAllTeams(self, folderName):
         """
