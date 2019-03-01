@@ -42,9 +42,12 @@ print("in one of {}'s matches, the final score for their alliance was {} and the
 #    print("-- {}".format(i.key))
 
 # lets get scores for all qualifier matches
+# print("Auto:")
 qualMatchScores = {}
 for i in matches:
     if i.comp_level == "qm":
+#        botPosition = match['alliances'][alliance]['team_keys'].index(teamkey)
+#        print("{} auto: {}".format(teamNum, scoreBreakdown[alliance]['autoRobot{}'.format(botPosition+1)]))
         qualMatchScores[i.match_number] = i.score_breakdown.get(alliance).get("totalPoints")
 
 print("\nMatch scores:")

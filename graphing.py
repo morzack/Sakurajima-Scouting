@@ -13,9 +13,19 @@ class EventGrapher:
 
         self.tba = tbapy.TBA(secretJson.get("key"))
 
-        self.event = event
+        self.event = "{}{}".format(year, event)
         self.year = year
-        self.matches = self.tba.event_matches("{}{}".format(year, event))
+        self.matches = self.tba.event_matches(self.event)
+        self.teamKeys = self.tba.event_teams(self.event, keys=True)
+
+    def graphAllTeams(self, folderName):
+        """
+        use all graph methods to graph all teams that were at the event
+            :param folderName: folder to deposit graphs into
+        """
+        for team in self.teamKeys:
+            self.graphTeamScores(team, "{}/{}.png".format(folderName, team))
+            print("Saved {}/{}.png".format(folderName, team))
 
     def graphTeamScores(self, team, filename):
         """
@@ -42,9 +52,11 @@ class EventGrapher:
         polyfit = np.polyfit(x, y, 1)
         trend = np.poly1d(polyfit)
         # make plot
+        plt.gca().set_ylim([configuration.minScore, configuration.maxScore])
         plt.plot(x, y)
         plt.plot(x, trend(x), 'r--')
         plt.title("Match scores from {} at {}".format(team, self.event))
         plt.xlabel("Match")
         plt.ylabel("Score")
         plt.savefig(filename, bbox_inches='tight')
+        plt.clf()
