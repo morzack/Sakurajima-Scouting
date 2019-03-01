@@ -14,6 +14,16 @@ class SiteGenerator:
             with open("baseSite.md", 'r') as baseSite:
                 siteFile.write(baseSite.read())
             
+            # calculate the best teams
+            siteFile.write("\n\n## At a Glance")
+            siteFile.write("\n\n### Top OPR Teams\n")
+            
+            teamOprs = []
+            for teamKey in self.grapher.teamKeys:
+                teamOprs.append([self.grapher.oprs['oprs'][teamKey], "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname'])])
+            for opr in sorted(teamOprs)[::-1]:
+                siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().replace(" ","-").replace(":", ""), opr[0]))
+
             # then add images and opr
             siteFile.write("\n\n## In depth")
             for teamKey in self.grapher.teamKeys:

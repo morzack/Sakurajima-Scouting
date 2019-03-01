@@ -3,7 +3,7 @@ matplotlibStyle = 'fivethirtyeight'
 year = 2018
 defaultevent = "ncth"
 
-imageFolder = 'docs/images'
+imageFolder = 'images'
 
 minScore = 0
 maxScore = 500

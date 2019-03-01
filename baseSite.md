@@ -8,7 +8,3 @@ Hopefully most of this will be auto generated as needed to make things easier fo
 Source code can be found [here](https://github.com/morzack/Sakurajima-Scouting).
 
 Message me at @Valis#7360 on Discord for more information.
-
-## At a glance: The best teams
-
-* 254 | OPR 9001

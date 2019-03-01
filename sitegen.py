@@ -21,7 +21,7 @@ eventId = configuration.defaultevent
 # generate graphs as needed
 grapher = graphing.EventGrapher(event=eventId, year=configuration.year)
 if generateImages:
-    grapher.graphAllTeams(configuration.imageFolder)
+    grapher.graphAllTeams("docs/{}".format(configuration.imageFolder))
 
 # generate site
 siteGenerator = SiteGenerator(event=eventId, year=configuration.year)
