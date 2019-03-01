@@ -27,7 +27,7 @@ class SiteGenerator:
             teamOprs = []
             for teamKey in self.grapher.teamKeys:
                 if teamKey in self.grapher.oprs['oprs']:
-                    teamOprs.append([self.grapher.oprs['oprs'][teamKey], "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']), teamKey])
+                    teamOprs.append([round(self.grapher.oprs['oprs'][teamKey], 4), "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']), teamKey])
             for opr in sorted(teamOprs)[::-1]:
                 siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0]))
             
@@ -73,6 +73,16 @@ class SiteGenerator:
             siteFile.write("\n\n## In depth")
             for teamKey in self.grapher.teamKeys:
                 if teamKey in self.grapher.oprs['oprs']:
-                    siteFile.write("\n\n### {}, {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']))
-                    siteFile.write("\n\nOPR: {}".format(self.grapher.oprs['oprs'][teamKey]))
+                    teamNum = int(teamKey[3:])
+                    siteFile.write("\n\n### {}, {}".format(teamNum, self.grapher.tba.team(teamKey, simple=True)['nickname']))
+                    siteFile.write("\n\n**OPR**: {}".format(round(self.grapher.oprs['oprs'][teamKey], 4)))
+                    siteFile.write("\n\n**Team Capabilities**:")
+                    siteFile.write("\n\n| low hatch | low cargo | high hatch | high cargo | average climb level |")
+                    siteFile.write("\n| :---: | :---: | :---: | :---: | --- |")                    
+                    lowHatch = "X" if teamNum in qualitiativeData['hatch']['low'] else ""
+                    highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
+                    lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
+                    highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
+                    siteFile.write("\n| {} | {} | {} | {} | {} |".format(lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
                     siteFile.write("\n\n![{} scores across all recorded matches]({}/{}.png)".format(teamKey[3:], configuration.imageFolder, teamKey))
+                    siteFile.write("\n\n[Return to top](#at-a-glance)")

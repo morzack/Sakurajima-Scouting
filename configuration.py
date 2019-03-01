@@ -8,4 +8,4 @@ defaultevent = "scmb"
 imageFolder = 'images'
 
 minScore = 0
-maxScore = 75
+maxScore = 125
