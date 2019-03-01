@@ -49,6 +49,8 @@ class EventGrapher:
         qualMatchScores.sort()
         # make a trendline
         data = np.array(qualMatchScores)
+        if len(data) == 0:
+            return
         x, y = data[:,0], data[:,1]
         polyfit = np.polyfit(x, y, 1)
         trend = np.poly1d(polyfit)

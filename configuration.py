@@ -1,9 +1,9 @@
 matplotlibStyle = 'fivethirtyeight'
 
-year = 2018
-defaultevent = "ncth"
+year = 2019
+defaultevent = "week0"
 
 imageFolder = 'images'
 
 minScore = 0
-maxScore = 500
+maxScore = 75

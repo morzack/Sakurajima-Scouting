@@ -13,215 +13,159 @@ Message me at @Valis#7360 on Discord for more information.
 
 ### Top OPR Teams
 
-- [Team 1102: M'Aiken Magic ](#1102-m'aiken-magic), 211.96123071643552
-- [Team 3196: Team SPORK](#3196-team-spork), 164.34715964760943
-- [Team 1533: Triple Strange](#1533-triple-strange), 160.4891249815323
-- [Team 3229: Hawktimus Prime](#3229-hawktimus-prime), 159.09974832020038
-- [Team 5724: Spartan Robotics](#5724-spartan-robotics), 149.18724704100228
-- [Team 5511: Cortechs Robotics](#5511-cortechs-robotics), 147.3921467891091
-- [Team 2655: The Flying Platypi](#2655-the-flying-platypi), 146.02255226509658
-- [Team 1225: The Gorillas](#1225-the-gorillas), 116.90550143297604
-- [Team 5190: Green Hope Falcons](#5190-green-hope-falcons), 110.4846042216071
-- [Team 5679: Girls on Fire](#5679-girls-on-fire), 109.08782712445154
-- [Team 3459: Team PyroTech](#3459-team-pyrotech), 104.57190858466373
-- [Team 6500: GearCats](#6500-gearcats), 104.26201162028394
-- [Team 2059: The Hitchhikers](#2059-the-hitchhikers), 103.954959972872
-- [Team 6888: Cav-A-Gears](#6888-cav-a-gears), 98.50067581634538
-- [Team 4829: Titanium Tigers](#4829-titanium-tigers), 91.70032399423843
-- [Team 6894: Iced Java](#6894-iced-java), 83.41283042926429
-- [Team 3737: Roto-Raptors](#3737-roto-raptors), 82.58111221923667
-- [Team 4561: TerrorBytes](#4561-terrorbytes), 81.7403062138067
-- [Team 587: Hedgehogs](#587-hedgehogs), 78.9051744815126
-- [Team 2640: HOTBOTZ](#2640-hotbotz), 74.55016247550336
-- [Team 6004: f(x) Robotics](#6004-f(x)-robotics), 70.62980119883079
-- [Team 5762: FranklinBots](#5762-franklinbots), 59.60216392304515
-- [Team 5160: Chargers](#5160-chargers), 49.60406075708984
-- [Team 4290: Bots of War](#4290-bots-of-war), 49.10871939455389
-- [Team 9999: Off-Season Demo Team](#9999-off-season-demo-team), 48.495669808834165
-- [Team 5518: Techno Wolves](#5518-techno-wolves), 39.94263505787065
-- [Team 3506: YETI Robotics](#3506-yeti-robotics), 36.49237049449907
-- [Team 3661: RoboWolves](#3661-robowolves), 30.477299070106774
-- [Team 4935: T-Rex](#4935-t-rex), 29.94765026516298
-- [Team 4816: Gadget Girls](#4816-gadget-girls), -34.02840688916817
+- [Team 3236: TRIFORCE](#3236-triforce), 24.366797074913954
+- [Team 1729: Team Inconceivable!](#1729-team-inconceivable!), 19.451682072477084
+- [Team 58: The Riot Crew](#58-the-riot-crew), 18.509498930703106
+- [Team 501: The PowerKnights](#501-the-powerknights), 18.089533086810256
+- [Team 1153: The Walpole Revolution](#1153-the-walpole-revolution), 15.32822756129525
+- [Team 2342: Team Phoenix](#2342-team-phoenix), 14.536198498181088
+- [Team 811: Cardinals](#811-cardinals), 12.597968818916627
+- [Team 1517: The Lumberjacks](#1517-the-lumberjacks), 12.23364293643587
+- [Team 246: Overclocked](#246-overclocked), 10.578146724215728
+- [Team 6153: Blue Crew](#6153-blue-crew), 10.381377350091016
+- [Team 5687: The Outliers](#5687-the-outliers), 9.697970504521383
+- [Team 7314: Tornados](#7314-tornados), 8.37720568399612
+- [Team 2084: Robots by the C](#2084-robots-by-the-c), 7.7334636867642175
+- [Team 5813: Morpheus](#5813-morpheus), 6.022964548375477
+- [Team 4905: Andromeda One](#4905-andromeda-one), 1.6000785998847231
+- [Team 3467: Windham Windup](#3467-windham-windup), -0.8983592351164429
+- [Team 1721: Tidal Force](#1721-tidal-force), -0.9741805100379297
+- [Team 190: Gompei and the H.E.R.D.](#190-gompei-and-the-h.e.r.d.), -4.0800834566188895
+- [Team 509: Red Storm](#509-red-storm), -4.553661500014177
+- [Team 3986: Express-O](#3986-express-o), -7.1396833557292645
+- [Team 1073: The Force Team](#1073-the-force-team), -8.570409832858564
+- [Team 3323: Potential Energy](#3323-potential-energy), -9.199718120298636
 
 ## In depth
 
-### 1102, M'Aiken Magic 
+### 1073, The Force Team
 
-OPR: 211.96123071643552
+OPR: -8.570409832858564
 
-![1102 scores across all recorded matches](images/frc1102.png)
+![1073 scores across all recorded matches](images/frc1073.png)
 
-### 1225, The Gorillas
+### 1153, The Walpole Revolution
 
-OPR: 116.90550143297604
+OPR: 15.32822756129525
 
-![1225 scores across all recorded matches](images/frc1225.png)
+![1153 scores across all recorded matches](images/frc1153.png)
 
-### 1533, Triple Strange
+### 1517, The Lumberjacks
 
-OPR: 160.4891249815323
+OPR: 12.23364293643587
 
-![1533 scores across all recorded matches](images/frc1533.png)
+![1517 scores across all recorded matches](images/frc1517.png)
 
-### 2059, The Hitchhikers
+### 1721, Tidal Force
 
-OPR: 103.954959972872
+OPR: -0.9741805100379297
 
-![2059 scores across all recorded matches](images/frc2059.png)
+![1721 scores across all recorded matches](images/frc1721.png)
 
-### 2640, HOTBOTZ
+### 1729, Team Inconceivable!
 
-OPR: 74.55016247550336
+OPR: 19.451682072477084
 
-![2640 scores across all recorded matches](images/frc2640.png)
+![1729 scores across all recorded matches](images/frc1729.png)
 
-### 2655, The Flying Platypi
+### 190, Gompei and the H.E.R.D.
 
-OPR: 146.02255226509658
+OPR: -4.0800834566188895
 
-![2655 scores across all recorded matches](images/frc2655.png)
+![190 scores across all recorded matches](images/frc190.png)
 
-### 3196, Team SPORK
+### 2084, Robots by the C
 
-OPR: 164.34715964760943
+OPR: 7.7334636867642175
 
-![3196 scores across all recorded matches](images/frc3196.png)
+![2084 scores across all recorded matches](images/frc2084.png)
 
-### 3229, Hawktimus Prime
+### 2342, Team Phoenix
 
-OPR: 159.09974832020038
+OPR: 14.536198498181088
 
-![3229 scores across all recorded matches](images/frc3229.png)
+![2342 scores across all recorded matches](images/frc2342.png)
 
-### 3459, Team PyroTech
+### 246, Overclocked
 
-OPR: 104.57190858466373
+OPR: 10.578146724215728
 
-![3459 scores across all recorded matches](images/frc3459.png)
+![246 scores across all recorded matches](images/frc246.png)
 
-### 3506, YETI Robotics
+### 3236, TRIFORCE
 
-OPR: 36.49237049449907
+OPR: 24.366797074913954
 
-![3506 scores across all recorded matches](images/frc3506.png)
+![3236 scores across all recorded matches](images/frc3236.png)
 
-### 3661, RoboWolves
+### 3323, Potential Energy
 
-OPR: 30.477299070106774
+OPR: -9.199718120298636
 
-![3661 scores across all recorded matches](images/frc3661.png)
+![3323 scores across all recorded matches](images/frc3323.png)
 
-### 3737, Roto-Raptors
+### 3467, Windham Windup
 
-OPR: 82.58111221923667
+OPR: -0.8983592351164429
 
-![3737 scores across all recorded matches](images/frc3737.png)
+![3467 scores across all recorded matches](images/frc3467.png)
 
-### 4290, Bots of War
+### 3986, Express-O
 
-OPR: 49.10871939455389
+OPR: -7.1396833557292645
 
-![4290 scores across all recorded matches](images/frc4290.png)
+![3986 scores across all recorded matches](images/frc3986.png)
 
-### 4561, TerrorBytes
+### 4905, Andromeda One
 
-OPR: 81.7403062138067
+OPR: 1.6000785998847231
 
-![4561 scores across all recorded matches](images/frc4561.png)
+![4905 scores across all recorded matches](images/frc4905.png)
 
-### 4816, Gadget Girls
+### 501, The PowerKnights
 
-OPR: -34.02840688916817
+OPR: 18.089533086810256
 
-![4816 scores across all recorded matches](images/frc4816.png)
+![501 scores across all recorded matches](images/frc501.png)
 
-### 4829, Titanium Tigers
+### 509, Red Storm
 
-OPR: 91.70032399423843
+OPR: -4.553661500014177
 
-![4829 scores across all recorded matches](images/frc4829.png)
+![509 scores across all recorded matches](images/frc509.png)
 
-### 4935, T-Rex
+### 5687, The Outliers
 
-OPR: 29.94765026516298
+OPR: 9.697970504521383
 
-![4935 scores across all recorded matches](images/frc4935.png)
+![5687 scores across all recorded matches](images/frc5687.png)
 
-### 5160, Chargers
+### 58, The Riot Crew
 
-OPR: 49.60406075708984
+OPR: 18.509498930703106
 
-![5160 scores across all recorded matches](images/frc5160.png)
+![58 scores across all recorded matches](images/frc58.png)
 
-### 5190, Green Hope Falcons
+### 5813, Morpheus
 
-OPR: 110.4846042216071
+OPR: 6.022964548375477
 
-![5190 scores across all recorded matches](images/frc5190.png)
+![5813 scores across all recorded matches](images/frc5813.png)
 
-### 5511, Cortechs Robotics
+### 6153, Blue Crew
 
-OPR: 147.3921467891091
+OPR: 10.381377350091016
 
-![5511 scores across all recorded matches](images/frc5511.png)
+![6153 scores across all recorded matches](images/frc6153.png)
 
-### 5518, Techno Wolves
+### 7314, Tornados
 
-OPR: 39.94263505787065
+OPR: 8.37720568399612
 
-![5518 scores across all recorded matches](images/frc5518.png)
+![7314 scores across all recorded matches](images/frc7314.png)
 
-### 5679, Girls on Fire
+### 811, Cardinals
 
-OPR: 109.08782712445154
+OPR: 12.597968818916627
 
-![5679 scores across all recorded matches](images/frc5679.png)
-
-### 5724, Spartan Robotics
-
-OPR: 149.18724704100228
-
-![5724 scores across all recorded matches](images/frc5724.png)
-
-### 5762, FranklinBots
-
-OPR: 59.60216392304515
-
-![5762 scores across all recorded matches](images/frc5762.png)
-
-### 587, Hedgehogs
-
-OPR: 78.9051744815126
-
-![587 scores across all recorded matches](images/frc587.png)
-
-### 6004, f(x) Robotics
-
-OPR: 70.62980119883079
-
-![6004 scores across all recorded matches](images/frc6004.png)
-
-### 6500, GearCats
-
-OPR: 104.26201162028394
-
-![6500 scores across all recorded matches](images/frc6500.png)
-
-### 6888, Cav-A-Gears
-
-OPR: 98.50067581634538
-
-![6888 scores across all recorded matches](images/frc6888.png)
-
-### 6894, Iced Java
-
-OPR: 83.41283042926429
-
-![6894 scores across all recorded matches](images/frc6894.png)
-
-### 9999, Off-Season Demo Team
-
-OPR: 48.495669808834165
-
-![9999 scores across all recorded matches](images/frc9999.png)
+![811 scores across all recorded matches](images/frc811.png)

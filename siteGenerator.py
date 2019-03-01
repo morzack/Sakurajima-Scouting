@@ -20,13 +20,15 @@ class SiteGenerator:
             
             teamOprs = []
             for teamKey in self.grapher.teamKeys:
-                teamOprs.append([self.grapher.oprs['oprs'][teamKey], "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname'])])
+                if teamKey in self.grapher.oprs['oprs']:
+                    teamOprs.append([self.grapher.oprs['oprs'][teamKey], "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname'])])
             for opr in sorted(teamOprs)[::-1]:
                 siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().replace(" ","-").replace(":", ""), opr[0]))
 
             # then add images and opr
             siteFile.write("\n\n## In depth")
             for teamKey in self.grapher.teamKeys:
-                siteFile.write("\n\n### {}, {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']))
-                siteFile.write("\n\nOPR: {}".format(self.grapher.oprs['oprs'][teamKey]))
-                siteFile.write("\n\n![{} scores across all recorded matches]({}/{}.png)".format(teamKey[3:], configuration.imageFolder, teamKey))
+                if teamKey in self.grapher.oprs['oprs']:
+                    siteFile.write("\n\n### {}, {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname']))
+                    siteFile.write("\n\nOPR: {}".format(self.grapher.oprs['oprs'][teamKey]))
+                    siteFile.write("\n\n![{} scores across all recorded matches]({}/{}.png)".format(teamKey[3:], configuration.imageFolder, teamKey))
