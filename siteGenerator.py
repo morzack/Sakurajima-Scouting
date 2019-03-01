@@ -1,5 +1,6 @@
 import tbapy
 import numpy as np
+import string
 
 import configuration
 from graphing import EventGrapher
@@ -18,12 +19,14 @@ class SiteGenerator:
             siteFile.write("\n\n## At a Glance")
             siteFile.write("\n\n### Top OPR Teams\n")
             
+            stringTranslator = str.maketrans('', '', string.punctuation)
+
             teamOprs = []
             for teamKey in self.grapher.teamKeys:
                 if teamKey in self.grapher.oprs['oprs']:
                     teamOprs.append([self.grapher.oprs['oprs'][teamKey], "{}: {}".format(teamKey[3:], self.grapher.tba.team(teamKey, simple=True)['nickname'])])
             for opr in sorted(teamOprs)[::-1]:
-                siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().replace(" ","-").replace(":", ""), opr[0]))
+                siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0]))
 
             # then add images and opr
             siteFile.write("\n\n## In depth")

@@ -1,7 +1,7 @@
 matplotlibStyle = 'fivethirtyeight'
 
 year = 2019
-defaultevent = "week0"
+defaultevent = "scmb"
 
 imageFolder = 'images'
 

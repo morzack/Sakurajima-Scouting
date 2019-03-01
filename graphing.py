@@ -44,7 +44,7 @@ class EventGrapher:
                 if teamKey in match['alliances'][alliance]['team_keys']:
                     teamAlliance = alliance
                     break
-            if match.comp_level == "qm" and teamAlliance != "None":
+            if match.comp_level == "qm" and teamAlliance != "None" and match['alliances'][teamAlliance]['score'] > 0:
                 qualMatchScores.append((match['match_number'], match['alliances'][teamAlliance]['score']))
         qualMatchScores.sort()
         # make a trendline
