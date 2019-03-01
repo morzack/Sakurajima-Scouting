@@ -1,6 +1,7 @@
 import tbapy
 import numpy as np
 import string
+import json
 
 import configuration
 from graphing import EventGrapher
@@ -10,6 +11,8 @@ class SiteGenerator:
         self.grapher = EventGrapher(event, year)
 
     def generateSite(self):
+        with open(configuration.qualitativeDataFile, 'r') as qualitiativeDataFile:
+            qualitiativeData = json.load(qualitiativeDataFile)
         with open("docs/index.md", 'w+') as siteFile:
             # first put the basic part of the site in place
             with open("baseSite.md", 'r') as baseSite:
@@ -59,7 +62,12 @@ class SiteGenerator:
             siteFile.write("\n--- | --- | :---: | :---: | :---: | :---: | :---:")
             for opr in sorted(teamOprs)[::-1]:
                 teamKey = opr[2]
-                siteFile.write("\n{} | {} | | | | | {}".format(opr[1], opr[0], round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
+                teamNum = int(teamKey[3:])
+                lowHatch = "X" if teamNum in qualitiativeData['hatch']['low'] else ""
+                highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
+                lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
+                highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
+                siteFile.write("\n{} | {} | {} | {} | {} | {} | {}".format(opr[1], opr[0], lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
 
             # then add images and opr
             siteFile.write("\n\n## In depth")

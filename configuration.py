@@ -1,5 +1,7 @@
 matplotlibStyle = 'fivethirtyeight'
 
+qualitativeDataFile = "qualitative.json"
+
 year = 2019
 defaultevent = "scmb"
 
