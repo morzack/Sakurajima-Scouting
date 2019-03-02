@@ -1,4 +1,4 @@
-matplotlibStyle = 'fivethirtyeight'
+matplotlibStyle = 'fast'
 
 qualitativeDataFile = "qualitative.json"
 

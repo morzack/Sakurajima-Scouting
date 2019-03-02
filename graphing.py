@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import tbapy
 import json
@@ -28,12 +29,48 @@ class EventGrapher:
             self.graphTeamScores(team, "{}/{}.png".format(folderName, team))
             print("Saved {}/{}.png".format(folderName, team))
 
+    def teamBoxPlot(self, filename, teamKeys):
+        """
+        graph side by side violin plots for the specified teams
+            :param filename: the file to save the plot into
+            :param teamKeys: list of keys (using the TBA standard) referring to teams to graph
+        """
+        matplotlib.style.use(configuration.matplotlibStyle)
+        matchScores = []
+        for team in teamKeys:
+            scores = []
+            for match in self.matches:
+                tAlliance = "None"
+                for alliance in ['red', 'blue']:
+                    if team in match['alliances'][alliance]['team_keys']:
+                        tAlliance = alliance
+                        break
+                if match['comp_level'] == 'qm' and tAlliance != "None" and match['alliances'][tAlliance]['score'] > 0:
+                    scores.append(match['alliances'][tAlliance]['score'])
+            matchScores.append(sorted(scores)[::-1])
+        tempScores = sorted(zip(matchScores, teamKeys))
+        scores, teamKeys = zip(*tempScores)
+        plt.figure(figsize=(13, 13), dpi=80)
+        plt.boxplot(scores, showmeans=False, vert=False)
+        plt.gca().xaxis.grid(True)
+        plt.gca().yaxis.grid(True)
+        plt.gca().set_xlabel("Match Scores")
+        plt.title("Distribution of Scores at {}".format(self.event))
+        labels = []
+        for i in teamKeys:
+            labels.append("Team {}, {}".format(i[3:], self.tba.team(i, simple=True)['nickname']))
+        plt.setp(plt.gca(), yticks=[y+1 for y in range(len(teamKeys))], yticklabels=labels)
+        # plt.show()
+        plt.savefig(filename, bbox_inches='tight')
+        plt.clf()
+
     def graphTeamScores(self, team, filename):
         """
         generate and save a graph with match scores for a team at an event
             :param team: team to use, expects team number as an int like 5160 or 254
             :param filename: filename to save graph to
         """
+        matplotlib.style.use(configuration.matplotlibStyle)
         # get the team key
         teamKey = self.tba.team_key(team)
         # first collect the data needed

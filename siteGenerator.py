@@ -31,6 +31,10 @@ class SiteGenerator:
             for opr in teamOprs:
                 siteFile.write("\n- [Team {}](#{}), {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0]))
             
+            # points scored per match boxplot
+            siteFile.write("\n\n### Points scored per match")
+            siteFile.write("\n\n![Points scored per match boxplot](images/boxplot.png)")
+
             # obtain the average climb level for each team
             climbLevels = {
                 "Unknown" : -1,
