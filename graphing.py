@@ -20,7 +20,7 @@ class EventGrapher:
         self.teamKeys = self.tba.event_teams(self.event, keys=True)
         self.oprs = self.tba.event_oprs(self.event)
         
-        plt.xkcd()
+        # plt.xkcd()
 
     def graphAllTeams(self, folderName):
         """

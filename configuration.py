@@ -3,7 +3,7 @@ matplotlibStyle = 'fast'
 qualitativeDataFile = "qualitative.json"
 
 year = 2019
-defaultevent = "2019ncwak"
+defaultevent = "ncwak"
 
 imageFolder = 'images'
 

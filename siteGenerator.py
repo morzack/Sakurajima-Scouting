@@ -71,7 +71,8 @@ class SiteGenerator:
                 highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
                 lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
                 highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
-                siteFile.write("\n[Team {}](#{}) | {} | {} | {} | {} | {} | {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0], lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
+                climb = round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3) if teamClimbs[teamKey][1] > 0 else 0
+                siteFile.write("\n[Team {}](#{}) | {} | {} | {} | {} | {} | {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0], lowHatch, highHatch, lowCargo, highCargo, climb))
 
             # then add images and opr
             siteFile.write("\n\n## In depth")
@@ -87,6 +88,7 @@ class SiteGenerator:
                     highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
                     lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
                     highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
-                    siteFile.write("\n| {} | {} | {} | {} | {} |".format(lowHatch, highHatch, lowCargo, highCargo, round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3)))
+                    climb = round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3) if teamClimbs[teamKey][1] > 0 else 0
+                    siteFile.write("\n| {} | {} | {} | {} | {} |".format(lowHatch, highHatch, lowCargo, highCargo, climb))
                     siteFile.write("\n\n![{} scores across all recorded matches]({}/{}.png)".format(teamKey[3:], configuration.imageFolder, teamKey))
                     siteFile.write("\n\n[Return to top](#at-a-glance)")
