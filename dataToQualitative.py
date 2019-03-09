@@ -14,7 +14,7 @@ cargoHigh = []
 for teamData in data:
     team = teamData.split(",")
     if teamData != "":
-        teamNum = team[0]
+        teamNum = int(team[0])
         if int(team[1]) > 0:
             hatchLow.append(teamNum)
         if int(team[2]) > 0:
