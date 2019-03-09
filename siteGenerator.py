@@ -62,7 +62,7 @@ class SiteGenerator:
 
             # display the skill breakdown for each team
             siteFile.write("\n\n### Team skill breakdown")
-            siteFile.write("\n\nteam | opr | low hatch | low cargo | high hatch | high cargo | average climb level")
+            siteFile.write("\n\nteam | opr | low hatch | high hatch | low cargo | high cargo | average climb level")
             siteFile.write("\n--- | --- | :---: | :---: | :---: | :---: | :---:")
             for opr in sorted(teamOprs)[::-1]:
                 teamKey = opr[2]
@@ -82,7 +82,7 @@ class SiteGenerator:
                     siteFile.write("\n\n### {}, {}".format(teamNum, self.grapher.tba.team(teamKey, simple=True)['nickname']))
                     siteFile.write("\n\n**OPR**: {}".format(round(self.grapher.oprs['oprs'][teamKey], 4)))
                     siteFile.write("\n\n**Team Capabilities**:")
-                    siteFile.write("\n\n| low hatch | low cargo | high hatch | high cargo | average climb level |")
+                    siteFile.write("\n\n| low hatch | high hatch | low cargo | high cargo | average climb level |")
                     siteFile.write("\n| :---: | :---: | :---: | :---: | --- |")                    
                     lowHatch = "X" if teamNum in qualitiativeData['hatch']['low'] else ""
                     highHatch = "X" if teamNum in qualitiativeData['hatch']['high'] else ""
