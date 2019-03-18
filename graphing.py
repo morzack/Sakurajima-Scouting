@@ -66,6 +66,26 @@ class EventGrapher:
         plt.savefig(filename, bbox_inches='tight')
         plt.clf()
 
+    def plotAllMatchScores(self, filename):
+        """
+        generate a plot of both alliance scores through the matches
+            :param filename: file to save to
+        """
+        matplotlib.style.use(configuration.matplotlibStyle)
+        redAlliance = []
+        blueAlliance = []
+        matchNums = []
+        for match in self.matches:
+            rs = match['alliances']['red']['score']
+            bs = match['alliances']['blue']['score']
+            if rs > 0 and bs > 0:
+                redAlliance.append(rs)
+                blueAlliance.append(bs)
+                matchNums.append(match['match_number'])
+        plt.plot(redAlliance)
+        plt.plot(blueAlliance)
+        plt.show()
+
     def graphTeamScores(self, team, filename):
         """
         generate and save a graph with match scores for a team at an event
@@ -101,4 +121,13 @@ class EventGrapher:
         plt.xlabel("Match")
         plt.ylabel("Score")
         plt.savefig(filename, bbox_inches='tight')
+        plt.clf()
+
+        scores = [i[1] for i in qualMatchScores]
+        bins = configuration.scoreBins
+        plt.hist(scores, bins, rwidth=.9)
+        plt.title("Match scores from {} at {}".format(team, self.event))
+        plt.xlabel("Score")
+        plt.ylabel("Frequency")
+        plt.savefig("{}-hist".format(filename), bbox_inches='tight')
         plt.clf()
