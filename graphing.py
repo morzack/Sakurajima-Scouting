@@ -71,9 +71,11 @@ class EventGrapher:
         generate a plot of both alliance scores through the matches
             :param filename: file to save to
         """
+        # NOTE: This isn't actually that useful of a function so i wont be using it in the final product
         matplotlib.style.use(configuration.matplotlibStyle)
         redAlliance = []
         blueAlliance = []
+        averageScores = []
         matchNums = []
         for match in self.matches:
             rs = match['alliances']['red']['score']
@@ -81,9 +83,11 @@ class EventGrapher:
             if rs > 0 and bs > 0:
                 redAlliance.append(rs)
                 blueAlliance.append(bs)
+                averageScores.append((rs+bs)/2)
                 matchNums.append(match['match_number'])
-        plt.plot(redAlliance)
-        plt.plot(blueAlliance)
+        plt.plot(redAlliance, color="red")
+        plt.plot(blueAlliance, color="blue")
+        plt.plot(averageScores, color="green")
         plt.show()
 
     def graphTeamScores(self, team, filename):
@@ -114,20 +118,24 @@ class EventGrapher:
         polyfit = np.polyfit(x, y, 1)
         trend = np.poly1d(polyfit)
         # make plot
+        plt.figure(figsize=(4, 8), dpi=80)
+        plt.subplot(2, 1, 1)
         plt.gca().set_ylim([configuration.minScore, configuration.maxScore])
         plt.plot(x, y)
         plt.plot(x, trend(x), 'r--')
         plt.title("Match scores from {} at {}".format(team, self.event))
         plt.xlabel("Match")
         plt.ylabel("Score")
-        plt.savefig(filename, bbox_inches='tight')
-        plt.clf()
-
+        # plt.savefig(filename, bbox_inches='tight')
+        # plt.clf()
+        
+        plt.subplot(2, 1, 2)
+        plt.gca().set_xlim([configuration.minScore, configuration.maxScore])
         scores = [i[1] for i in qualMatchScores]
         bins = configuration.scoreBins
         plt.hist(scores, bins, rwidth=.9)
-        plt.title("Match scores from {} at {}".format(team, self.event))
+        # plt.title("Match scores from {} at {}".format(team, self.event))
         plt.xlabel("Score")
         plt.ylabel("Frequency")
-        plt.savefig("{}-hist".format(filename), bbox_inches='tight')
+        plt.savefig(filename, bbox_inches='tight')
         plt.clf()
