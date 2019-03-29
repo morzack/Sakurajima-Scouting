@@ -22,6 +22,7 @@ eventId = configuration.defaultevent
 grapher = graphing.EventGrapher(event=eventId, year=configuration.year)
 if generateImages:
     grapher.graphAllTeams("docs/{}".format(configuration.imageFolder))
+    grapher.histogramAllMatches("docs/{}/allScoreHistogram".format(configuration.imageFolder))
     grapher.teamBoxPlot("docs/{}/boxplot".format(configuration.imageFolder), grapher.teamKeys)   # why is this after? because i dont want to read about resetting styles.
 
 # generate site
