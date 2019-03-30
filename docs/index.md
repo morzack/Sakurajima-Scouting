@@ -11,8 +11,8 @@ Message me at @Valis#7360 on Discord for more information.
 
 ## How to interpret this
 
-The OPR recoreded is extremely useful to see what teams are good overall, however it doesn't really give the full picture when it comes to skill.
-I'd reccomend pairing the OPR data with qualitative data that determines what it is that a team specializes in.
+The OPR recorded is extremely useful to see what teams are good overall, however it doesn't really give the full picture when it comes to skill.
+I'd recomend pairing the OPR data with qualitative data that determines what it is that a team specializes in.
 
 When interpreting the score graph the easiest thing to look at is the red trendline, as that can show team performance as matches progress.
 Obviously a positive slope is good, and any massive dips should be recorded and checked by looking at the OPR.
@@ -26,52 +26,52 @@ Sakurajima will probably calculate the score achieved in individual categories a
 
 ### Overall Competition Stats
 
-**Median match score**: 33.0
+**Median match score**: 45.5
 
-**Mean match score**: 33.43
+**Mean match score**: 43.05
 
-**SD of match scores**: 14.8
+**SD of match scores**: 13.32
 
 ![all scores](images/allScoreHistogram.png)
 
 ### All teams with OPR and Score P Value
 
-- [Team 2059: The Hitchhikers](#2059-the-hitchhikers),&nbsp;&nbsp;&nbsp;&nbsp;16.32,&nbsp;&nbsp;&nbsp;&nbsp;0.18
-- [Team 2642: Pitt Pirates](#2642-pitt-pirates),&nbsp;&nbsp;&nbsp;&nbsp;19.53,&nbsp;&nbsp;&nbsp;&nbsp;0.08
-- [Team 2682: Boneyard Robotics](#2682-boneyard-robotics),&nbsp;&nbsp;&nbsp;&nbsp;15.03,&nbsp;&nbsp;&nbsp;&nbsp;0.24
-- [Team 3229: Hawktimus Prime](#3229-hawktimus-prime),&nbsp;&nbsp;&nbsp;&nbsp;21.83,&nbsp;&nbsp;&nbsp;&nbsp;0.04
-- [Team 3336: Zimanators](#3336-zimanators),&nbsp;&nbsp;&nbsp;&nbsp;10.31,&nbsp;&nbsp;&nbsp;&nbsp;0.35
-- [Team 3459: Team PyroTech](#3459-team-pyrotech),&nbsp;&nbsp;&nbsp;&nbsp;4.9,&nbsp;&nbsp;&nbsp;&nbsp;0.74
-- [Team 3737: Roto-Raptors](#3737-roto-raptors),&nbsp;&nbsp;&nbsp;&nbsp;15.63,&nbsp;&nbsp;&nbsp;&nbsp;0.16
-- [Team 3796: Technical Assassins](#3796-technical-assassins),&nbsp;&nbsp;&nbsp;&nbsp;7.0,&nbsp;&nbsp;&nbsp;&nbsp;0.62
-- [Team 4291: AstroBots](#4291-astrobots),&nbsp;&nbsp;&nbsp;&nbsp;10.82,&nbsp;&nbsp;&nbsp;&nbsp;0.36
-- [Team 435: Robodogs](#435-robodogs),&nbsp;&nbsp;&nbsp;&nbsp;8.77,&nbsp;&nbsp;&nbsp;&nbsp;0.4
-- [Team 4561: TerrorBytes](#4561-terrorbytes),&nbsp;&nbsp;&nbsp;&nbsp;24.34,&nbsp;&nbsp;&nbsp;&nbsp;0.03
-- [Team 4816: Gadget Girls](#4816-gadget-girls),&nbsp;&nbsp;&nbsp;&nbsp;3.47,&nbsp;&nbsp;&nbsp;&nbsp;0.62
-- [Team 4828: RoboEagles](#4828-roboeagles),&nbsp;&nbsp;&nbsp;&nbsp;4.85,&nbsp;&nbsp;&nbsp;&nbsp;0.47
-- [Team 5160: Chargers](#5160-chargers),&nbsp;&nbsp;&nbsp;&nbsp;12.4,&nbsp;&nbsp;&nbsp;&nbsp;0.3
-- [Team 5190: Green Hope Falcons](#5190-green-hope-falcons),&nbsp;&nbsp;&nbsp;&nbsp;17.75,&nbsp;&nbsp;&nbsp;&nbsp;0.12
-- [Team 5511: Cortechs Robotics](#5511-cortechs-robotics),&nbsp;&nbsp;&nbsp;&nbsp;23.92,&nbsp;&nbsp;&nbsp;&nbsp;0.04
-- [Team 5518: Techno Wolves](#5518-techno-wolves),&nbsp;&nbsp;&nbsp;&nbsp;7.0,&nbsp;&nbsp;&nbsp;&nbsp;0.55
-- [Team 5607: Team Firewall](#5607-team-firewall),&nbsp;&nbsp;&nbsp;&nbsp;12.12,&nbsp;&nbsp;&nbsp;&nbsp;0.29
-- [Team 5762: FranklinBots - TEAM HYDRA](#5762-franklinbots---team-hydra),&nbsp;&nbsp;&nbsp;&nbsp;15.54,&nbsp;&nbsp;&nbsp;&nbsp;0.22
-- [Team 5919: JoCo RoBos](#5919-joco-robos),&nbsp;&nbsp;&nbsp;&nbsp;4.49,&nbsp;&nbsp;&nbsp;&nbsp;0.64
-- [Team 6215: Armored Eagles](#6215-armored-eagles),&nbsp;&nbsp;&nbsp;&nbsp;1.17,&nbsp;&nbsp;&nbsp;&nbsp;0.82
-- [Team 6240: Eagles of the Knight](#6240-eagles-of-the-knight),&nbsp;&nbsp;&nbsp;&nbsp;-0.67,&nbsp;&nbsp;&nbsp;&nbsp;0.85
-- [Team 6332: Bull City Botics](#6332-bull-city-botics),&nbsp;&nbsp;&nbsp;&nbsp;4.41,&nbsp;&nbsp;&nbsp;&nbsp;0.74
-- [Team 6426: Robo Gladiators](#6426-robo-gladiators),&nbsp;&nbsp;&nbsp;&nbsp;15.88,&nbsp;&nbsp;&nbsp;&nbsp;0.24
-- [Team 6500: GearCats](#6500-gearcats),&nbsp;&nbsp;&nbsp;&nbsp;12.51,&nbsp;&nbsp;&nbsp;&nbsp;0.36
-- [Team 6502: DARC SIDE](#6502-darc-side),&nbsp;&nbsp;&nbsp;&nbsp;6.71,&nbsp;&nbsp;&nbsp;&nbsp;0.6
-- [Team 6565: Team Bobcat](#6565-team-bobcat),&nbsp;&nbsp;&nbsp;&nbsp;11.4,&nbsp;&nbsp;&nbsp;&nbsp;0.47
-- [Team 6908: Infuzed](#6908-infuzed),&nbsp;&nbsp;&nbsp;&nbsp;14.23,&nbsp;&nbsp;&nbsp;&nbsp;0.21
-- [Team 7029: Scotbotics](#7029-scotbotics),&nbsp;&nbsp;&nbsp;&nbsp;4.18,&nbsp;&nbsp;&nbsp;&nbsp;0.61
-- [Team 7463: Incandescent Mice](#7463-incandescent-mice),&nbsp;&nbsp;&nbsp;&nbsp;8.84,&nbsp;&nbsp;&nbsp;&nbsp;0.49
-- [Team 7671: Fire Hazard](#7671-fire-hazard),&nbsp;&nbsp;&nbsp;&nbsp;13.66,&nbsp;&nbsp;&nbsp;&nbsp;0.23
-- [Team 7675: Spark Guardians ](#7675-spark-guardians),&nbsp;&nbsp;&nbsp;&nbsp;17.48,&nbsp;&nbsp;&nbsp;&nbsp;0.15
-- [Team 7715: Robo-Banditos](#7715-robo-banditos),&nbsp;&nbsp;&nbsp;&nbsp;6.09,&nbsp;&nbsp;&nbsp;&nbsp;0.56
-- [Team 7739: Royal Tech Warriors](#7739-royal-tech-warriors),&nbsp;&nbsp;&nbsp;&nbsp;1.32,&nbsp;&nbsp;&nbsp;&nbsp;0.88
-- [Team 7763: Carrborobotics](#7763-carrborobotics),&nbsp;&nbsp;&nbsp;&nbsp;13.43,&nbsp;&nbsp;&nbsp;&nbsp;0.25
-- [Team 900: The Zebracorns](#900-the-zebracorns),&nbsp;&nbsp;&nbsp;&nbsp;14.47,&nbsp;&nbsp;&nbsp;&nbsp;0.11
+- [Team 2642: Pitt Pirates](#2642-pitt-pirates),&nbsp;&nbsp;&nbsp;&nbsp;20.08,&nbsp;&nbsp;&nbsp;&nbsp;0.92
+- [Team 2682: Boneyard Robotics](#2682-boneyard-robotics),&nbsp;&nbsp;&nbsp;&nbsp;22.13,&nbsp;&nbsp;&nbsp;&nbsp;0.78
+- [Team 3215: Apollo](#3215-apollo),&nbsp;&nbsp;&nbsp;&nbsp;0.61,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 3336: Zimanators](#3336-zimanators),&nbsp;&nbsp;&nbsp;&nbsp;18.76,&nbsp;&nbsp;&nbsp;&nbsp;0.76
+- [Team 3661: RoboWolves](#3661-robowolves),&nbsp;&nbsp;&nbsp;&nbsp;7.89,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 3737: Roto-Raptors](#3737-roto-raptors),&nbsp;&nbsp;&nbsp;&nbsp;18.45,&nbsp;&nbsp;&nbsp;&nbsp;0.92
+- [Team 3796: Technical Assassins](#3796-technical-assassins),&nbsp;&nbsp;&nbsp;&nbsp;5.36,&nbsp;&nbsp;&nbsp;&nbsp;0.99
+- [Team 3822: Neon Jets](#3822-neon-jets),&nbsp;&nbsp;&nbsp;&nbsp;11.94,&nbsp;&nbsp;&nbsp;&nbsp;0.96
+- [Team 4291: AstroBots](#4291-astrobots),&nbsp;&nbsp;&nbsp;&nbsp;15.46,&nbsp;&nbsp;&nbsp;&nbsp;0.95
+- [Team 435: Robodogs](#435-robodogs),&nbsp;&nbsp;&nbsp;&nbsp;13.33,&nbsp;&nbsp;&nbsp;&nbsp;0.92
+- [Team 4534: Wired Wizards](#4534-wired-wizards),&nbsp;&nbsp;&nbsp;&nbsp;27.91,&nbsp;&nbsp;&nbsp;&nbsp;0.62
+- [Team 4795: EastBots](#4795-eastbots),&nbsp;&nbsp;&nbsp;&nbsp;25.19,&nbsp;&nbsp;&nbsp;&nbsp;0.65
+- [Team 4816: Gadget Girls](#4816-gadget-girls),&nbsp;&nbsp;&nbsp;&nbsp;5.34,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 4829: Titanium Tigers](#4829-titanium-tigers),&nbsp;&nbsp;&nbsp;&nbsp;18.44,&nbsp;&nbsp;&nbsp;&nbsp;0.92
+- [Team 5160: Chargers](#5160-chargers),&nbsp;&nbsp;&nbsp;&nbsp;13.17,&nbsp;&nbsp;&nbsp;&nbsp;0.9
+- [Team 5511: Cortechs Robotics](#5511-cortechs-robotics),&nbsp;&nbsp;&nbsp;&nbsp;22.75,&nbsp;&nbsp;&nbsp;&nbsp;0.84
+- [Team 5544: SWIFT Robotics](#5544-swift-robotics),&nbsp;&nbsp;&nbsp;&nbsp;25.9,&nbsp;&nbsp;&nbsp;&nbsp;0.81
+- [Team 5607: Team Firewall](#5607-team-firewall),&nbsp;&nbsp;&nbsp;&nbsp;16.01,&nbsp;&nbsp;&nbsp;&nbsp;0.9
+- [Team 6004: f(x) Robotics](#6004-fx-robotics),&nbsp;&nbsp;&nbsp;&nbsp;13.49,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 6214: PHEnix](#6214-phenix),&nbsp;&nbsp;&nbsp;&nbsp;18.29,&nbsp;&nbsp;&nbsp;&nbsp;0.93
+- [Team 6215: Armored Eagles](#6215-armored-eagles),&nbsp;&nbsp;&nbsp;&nbsp;1.08,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 6426: Robo Gladiators](#6426-robo-gladiators),&nbsp;&nbsp;&nbsp;&nbsp;6.99,&nbsp;&nbsp;&nbsp;&nbsp;0.99
+- [Team 6500: GearCats](#6500-gearcats),&nbsp;&nbsp;&nbsp;&nbsp;23.82,&nbsp;&nbsp;&nbsp;&nbsp;0.84
+- [Team 6512: Coastal CATastrophe](#6512-coastal-catastrophe),&nbsp;&nbsp;&nbsp;&nbsp;5.99,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 6639: The Mechanical Minds ](#6639-the-mechanical-minds),&nbsp;&nbsp;&nbsp;&nbsp;16.09,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 6729: RobCoBots](#6729-robcobots),&nbsp;&nbsp;&nbsp;&nbsp;13.68,&nbsp;&nbsp;&nbsp;&nbsp;0.97
+- [Team 7029: Scotbotics](#7029-scotbotics),&nbsp;&nbsp;&nbsp;&nbsp;13.45,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 7265: Skeleton Crew](#7265-skeleton-crew),&nbsp;&nbsp;&nbsp;&nbsp;16.64,&nbsp;&nbsp;&nbsp;&nbsp;0.94
+- [Team 7270: Pender Circuit Breakers](#7270-pender-circuit-breakers),&nbsp;&nbsp;&nbsp;&nbsp;4.79,&nbsp;&nbsp;&nbsp;&nbsp;1.0
+- [Team 7443: Overhills Jag-Wires](#7443-overhills-jag-wires),&nbsp;&nbsp;&nbsp;&nbsp;18.91,&nbsp;&nbsp;&nbsp;&nbsp;0.95
+- [Team 7463: Incandescent Mice](#7463-incandescent-mice),&nbsp;&nbsp;&nbsp;&nbsp;11.79,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 7671: Fire Hazard](#7671-fire-hazard),&nbsp;&nbsp;&nbsp;&nbsp;22.13,&nbsp;&nbsp;&nbsp;&nbsp;0.94
+- [Team 7675: Spark Guardians ](#7675-spark-guardians),&nbsp;&nbsp;&nbsp;&nbsp;11.38,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 7715: Robo-Banditos](#7715-robo-banditos),&nbsp;&nbsp;&nbsp;&nbsp;6.64,&nbsp;&nbsp;&nbsp;&nbsp;0.98
+- [Team 7739: Royal Tech Warriors](#7739-royal-tech-warriors),&nbsp;&nbsp;&nbsp;&nbsp;7.28,&nbsp;&nbsp;&nbsp;&nbsp;0.99
+- [Team 7890: SeQuEnCe](#7890-sequence),&nbsp;&nbsp;&nbsp;&nbsp;15.39,&nbsp;&nbsp;&nbsp;&nbsp;0.93
 
 ### Points scored per match
 
@@ -79,76 +79,58 @@ Sakurajima will probably calculate the score achieved in individual categories a
 
 ### Team skill breakdown
 
-team | opr | z score percentile thing | low hatch | high hatch | low cargo | high cargo | average climb level
---- | --- | --- | :---: | :---: | :---: | :---: | :---:
-[Team 4561: TerrorBytes](#4561-terrorbytes) | 24.34 | 0.03 | X |  | X |  | 0.947
-[Team 5511: Cortechs Robotics](#5511-cortechs-robotics) | 23.92 | 0.04 | X |  | X |  | 2.842
-[Team 3229: Hawktimus Prime](#3229-hawktimus-prime) | 21.83 | 0.04 |  |  |  |  | 1.067
-[Team 2642: Pitt Pirates](#2642-pitt-pirates) | 19.53 | 0.08 | X |  | X |  | 0.833
-[Team 5190: Green Hope Falcons](#5190-green-hope-falcons) | 17.75 | 0.12 |  | X |  | X | 0.9
-[Team 7675: Spark Guardians ](#7675-spark-guardians) | 17.48 | 0.15 |  |  |  |  | 0.75
-[Team 2059: The Hitchhikers](#2059-the-hitchhikers) | 16.32 | 0.18 | X |  | X |  | 2.0
-[Team 6426: Robo Gladiators](#6426-robo-gladiators) | 15.88 | 0.24 |  |  |  |  | 0.75
-[Team 3737: Roto-Raptors](#3737-roto-raptors) | 15.63 | 0.16 | X | X | X | X | 0.941
-[Team 5762: FranklinBots - TEAM HYDRA](#5762-franklinbots---team-hydra) | 15.54 | 0.22 | X |  | X |  | 0.857
-[Team 2682: Boneyard Robotics](#2682-boneyard-robotics) | 15.03 | 0.24 | X | X | X | X | 0.733
-[Team 900: The Zebracorns](#900-the-zebracorns) | 14.47 | 0.11 | X | X | X | X | 1.778
-[Team 6908: Infuzed](#6908-infuzed) | 14.23 | 0.21 | X |  | X |  | 0.733
-[Team 7671: Fire Hazard](#7671-fire-hazard) | 13.66 | 0.23 | X |  | X |  | 0.95
-[Team 7763: Carrborobotics](#7763-carrborobotics) | 13.43 | 0.25 | X |  | X |  | 0.8
-[Team 6500: GearCats](#6500-gearcats) | 12.51 | 0.36 |  |  |  |  | 0.5
-[Team 5160: Chargers](#5160-chargers) | 12.4 | 0.3 | X |  | X |  | 0.933
-[Team 5607: Team Firewall](#5607-team-firewall) | 12.12 | 0.29 |  |  |  |  | 0.786
-[Team 6565: Team Bobcat](#6565-team-bobcat) | 11.4 | 0.47 |  |  |  |  | 1.0
-[Team 4291: AstroBots](#4291-astrobots) | 10.82 | 0.36 | X |  | X |  | 0.684
-[Team 3336: Zimanators](#3336-zimanators) | 10.31 | 0.35 |  |  |  |  | 0.75
-[Team 7463: Incandescent Mice](#7463-incandescent-mice) | 8.84 | 0.49 | X |  | X |  | 0.583
-[Team 435: Robodogs](#435-robodogs) | 8.77 | 0.4 | X |  | X |  | 0.5
-[Team 5518: Techno Wolves](#5518-techno-wolves) | 7.0 | 0.55 | X | X | X | X | 0.643
-[Team 3796: Technical Assassins](#3796-technical-assassins) | 7.0 | 0.62 |  |  |  |  | 0.5
-[Team 6502: DARC SIDE](#6502-darc-side) | 6.71 | 0.6 | X | X | X | X | 0.5
-[Team 7715: Robo-Banditos](#7715-robo-banditos) | 6.09 | 0.56 |  |  |  |  | 0.417
-[Team 3459: Team PyroTech](#3459-team-pyrotech) | 4.9 | 0.74 | X |  | X |  | 1.0
-[Team 4828: RoboEagles](#4828-roboeagles) | 4.85 | 0.47 | X |  | X |  | 1.65
-[Team 5919: JoCo RoBos](#5919-joco-robos) | 4.49 | 0.64 |  |  |  |  | 0.5
-[Team 6332: Bull City Botics](#6332-bull-city-botics) | 4.41 | 0.74 | X |  | X |  | 0.611
-[Team 7029: Scotbotics](#7029-scotbotics) | 4.18 | 0.61 | X |  | X |  | 0.588
-[Team 4816: Gadget Girls](#4816-gadget-girls) | 3.47 | 0.62 |  |  |  |  | 0.25
-[Team 7739: Royal Tech Warriors](#7739-royal-tech-warriors) | 1.32 | 0.88 |  |  |  |  | 0.333
-[Team 6215: Armored Eagles](#6215-armored-eagles) | 1.17 | 0.82 |  |  |  |  | 0.417
-[Team 6240: Eagles of the Knight](#6240-eagles-of-the-knight) | -0.67 | 0.85 |  |  |  |  | 0.417
+team | opr | z score percentile thing | opr/zs |  low hatch | high hatch | low cargo | high cargo | average climb level
+--- | --- | --- | --- | :---: | :---: | :---: | :---: | :---:
+[Team 4534: Wired Wizards](#4534-wired-wizards) | 27.91 | 0.62 | 45.016129032258064 |  |  |  |  | 1.889
+[Team 5544: SWIFT Robotics](#5544-swift-robotics) | 25.9 | 0.81 | 31.975308641975303 |  |  |  |  | 1.111
+[Team 4795: EastBots](#4795-eastbots) | 25.19 | 0.65 | 38.753846153846155 |  |  |  |  | 2.778
+[Team 6500: GearCats](#6500-gearcats) | 23.82 | 0.84 | 28.357142857142858 |  |  |  |  | 0.889
+[Team 5511: Cortechs Robotics](#5511-cortechs-robotics) | 22.75 | 0.84 | 27.083333333333336 | X |  | X |  | 2.444
+[Team 7671: Fire Hazard](#7671-fire-hazard) | 22.13 | 0.94 | 23.54255319148936 | X |  | X |  | 1.0
+[Team 2682: Boneyard Robotics](#2682-boneyard-robotics) | 22.13 | 0.78 | 28.37179487179487 | X | X | X | X | 0.889
+[Team 2642: Pitt Pirates](#2642-pitt-pirates) | 20.08 | 0.92 | 21.826086956521735 | X |  | X |  | 0.889
+[Team 7443: Overhills Jag-Wires](#7443-overhills-jag-wires) | 18.91 | 0.95 | 19.905263157894737 |  |  |  |  | 0.889
+[Team 3336: Zimanators](#3336-zimanators) | 18.76 | 0.76 | 24.68421052631579 |  |  |  |  | 0.889
+[Team 3737: Roto-Raptors](#3737-roto-raptors) | 18.45 | 0.92 | 20.054347826086953 | X | X | X | X | 0.889
+[Team 4829: Titanium Tigers](#4829-titanium-tigers) | 18.44 | 0.92 | 20.043478260869566 |  |  |  |  | 1.111
+[Team 6214: PHEnix](#6214-phenix) | 18.29 | 0.93 | 19.666666666666664 |  |  |  |  | 0.778
+[Team 7265: Skeleton Crew](#7265-skeleton-crew) | 16.64 | 0.94 | 17.70212765957447 |  |  |  |  | 0.778
+[Team 6639: The Mechanical Minds ](#6639-the-mechanical-minds) | 16.09 | 0.98 | 16.418367346938776 |  |  |  |  | 0.889
+[Team 5607: Team Firewall](#5607-team-firewall) | 16.01 | 0.9 | 17.78888888888889 |  |  |  |  | 0.778
+[Team 4291: AstroBots](#4291-astrobots) | 15.46 | 0.95 | 16.273684210526316 | X |  | X |  | 0.778
+[Team 7890: SeQuEnCe](#7890-sequence) | 15.39 | 0.93 | 16.548387096774192 |  |  |  |  | 1.667
+[Team 6729: RobCoBots](#6729-robcobots) | 13.68 | 0.97 | 14.103092783505154 |  |  |  |  | 0.778
+[Team 6004: f(x) Robotics](#6004-fx-robotics) | 13.49 | 0.98 | 13.76530612244898 |  |  |  |  | 1.333
+[Team 7029: Scotbotics](#7029-scotbotics) | 13.45 | 0.98 | 13.724489795918366 | X |  | X |  | 0.667
+[Team 435: Robodogs](#435-robodogs) | 13.33 | 0.92 | 14.489130434782608 | X |  | X |  | 0.556
+[Team 5160: Chargers](#5160-chargers) | 13.17 | 0.9 | 14.633333333333333 | X |  | X |  | 0.778
+[Team 3822: Neon Jets](#3822-neon-jets) | 11.94 | 0.96 | 12.4375 |  |  |  |  | 1.0
+[Team 7463: Incandescent Mice](#7463-incandescent-mice) | 11.79 | 0.98 | 12.03061224489796 | X |  | X |  | 0.889
+[Team 7675: Spark Guardians ](#7675-spark-guardians) | 11.38 | 0.98 | 11.612244897959185 |  |  |  |  | 0.778
+[Team 3661: RoboWolves](#3661-robowolves) | 7.89 | 1.0 | 7.89 |  |  |  |  | 0.889
+[Team 7739: Royal Tech Warriors](#7739-royal-tech-warriors) | 7.28 | 0.99 | 7.353535353535354 |  |  |  |  | 0.444
+[Team 6426: Robo Gladiators](#6426-robo-gladiators) | 6.99 | 0.99 | 7.0606060606060606 |  |  |  |  | 0.778
+[Team 7715: Robo-Banditos](#7715-robo-banditos) | 6.64 | 0.98 | 6.775510204081632 |  |  |  |  | 0.667
+[Team 6512: Coastal CATastrophe](#6512-coastal-catastrophe) | 5.99 | 1.0 | 5.99 |  |  |  |  | 0.556
+[Team 3796: Technical Assassins](#3796-technical-assassins) | 5.36 | 0.99 | 5.414141414141414 |  |  |  |  | 0.556
+[Team 4816: Gadget Girls](#4816-gadget-girls) | 5.34 | 1.0 | 5.34 |  |  |  |  | 0.667
+[Team 7270: Pender Circuit Breakers](#7270-pender-circuit-breakers) | 4.79 | 1.0 | 4.79 |  |  |  |  | 0.444
+[Team 6215: Armored Eagles](#6215-armored-eagles) | 1.08 | 1.0 | 1.08 |  |  |  |  | 0.444
+[Team 3215: Apollo](#3215-apollo) | 0.61 | 1.0 | 0.61 |  |  |  |  | 0.444
 
 ## In depth
 
-### 2059, The Hitchhikers
-
-**OPR**: 16.3164
-
-**P value**: 0.18
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 2.0 |
-
-![2059 scores across all recorded matches](images/frc2059.png)
-
-[Return to top](#at-a-glance)
-
----
-
 ### 2642, Pitt Pirates
 
-**OPR**: 19.5304
+**OPR**: 20.0828
 
-**P value**: 0.08
+**P value**: 0.92
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.833 |
+| X |  | X |  | 0.889 |
 
 ![2642 scores across all recorded matches](images/frc2642.png)
 
@@ -158,15 +140,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 2682, Boneyard Robotics
 
-**OPR**: 15.0315
+**OPR**: 22.1283
 
-**P value**: 0.24
+**P value**: 0.78
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X | X | X | X | 0.733 |
+| X | X | X | X | 0.889 |
 
 ![2682 scores across all recorded matches](images/frc2682.png)
 
@@ -174,19 +156,19 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 3229, Hawktimus Prime
+### 3215, Apollo
 
-**OPR**: 21.8299
+**OPR**: 0.6103
 
-**P value**: 0.04
+**P value**: 1.0
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 1.067 |
+|  |  |  |  | 0.444 |
 
-![3229 scores across all recorded matches](images/frc3229.png)
+![3215 scores across all recorded matches](images/frc3215.png)
 
 [Return to top](#at-a-glance)
 
@@ -194,15 +176,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 3336, Zimanators
 
-**OPR**: 10.3106
+**OPR**: 18.7595
 
-**P value**: 0.35
+**P value**: 0.76
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.75 |
+|  |  |  |  | 0.889 |
 
 ![3336 scores across all recorded matches](images/frc3336.png)
 
@@ -210,19 +192,19 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 3459, Team PyroTech
+### 3661, RoboWolves
 
-**OPR**: 4.9027
+**OPR**: 7.8851
 
-**P value**: 0.74
+**P value**: 1.0
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 1.0 |
+|  |  |  |  | 0.889 |
 
-![3459 scores across all recorded matches](images/frc3459.png)
+![3661 scores across all recorded matches](images/frc3661.png)
 
 [Return to top](#at-a-glance)
 
@@ -230,15 +212,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 3737, Roto-Raptors
 
-**OPR**: 15.6293
+**OPR**: 18.4505
 
-**P value**: 0.16
+**P value**: 0.92
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X | X | X | X | 0.941 |
+| X | X | X | X | 0.889 |
 
 ![3737 scores across all recorded matches](images/frc3737.png)
 
@@ -248,15 +230,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 3796, Technical Assassins
 
-**OPR**: 7.0035
+**OPR**: 5.3619
 
-**P value**: 0.62
+**P value**: 0.99
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.5 |
+|  |  |  |  | 0.556 |
 
 ![3796 scores across all recorded matches](images/frc3796.png)
 
@@ -264,17 +246,35 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 4291, AstroBots
+### 3822, Neon Jets
 
-**OPR**: 10.8234
+**OPR**: 11.9404
 
-**P value**: 0.36
+**P value**: 0.96
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.684 |
+|  |  |  |  | 1.0 |
+
+![3822 scores across all recorded matches](images/frc3822.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 4291, AstroBots
+
+**OPR**: 15.4602
+
+**P value**: 0.95
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+| X |  | X |  | 0.778 |
 
 ![4291 scores across all recorded matches](images/frc4291.png)
 
@@ -284,15 +284,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 435, Robodogs
 
-**OPR**: 8.7733
+**OPR**: 13.3309
 
-**P value**: 0.4
+**P value**: 0.92
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.5 |
+| X |  | X |  | 0.556 |
 
 ![435 scores across all recorded matches](images/frc435.png)
 
@@ -300,27 +300,9 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 4561, TerrorBytes
+### 4534, Wired Wizards
 
-**OPR**: 24.3363
-
-**P value**: 0.03
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.947 |
-
-![4561 scores across all recorded matches](images/frc4561.png)
-
-[Return to top](#at-a-glance)
-
----
-
-### 4816, Gadget Girls
-
-**OPR**: 3.4712
+**OPR**: 27.9147
 
 **P value**: 0.62
 
@@ -328,7 +310,43 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.25 |
+|  |  |  |  | 1.889 |
+
+![4534 scores across all recorded matches](images/frc4534.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 4795, EastBots
+
+**OPR**: 25.1919
+
+**P value**: 0.65
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+|  |  |  |  | 2.778 |
+
+![4795 scores across all recorded matches](images/frc4795.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 4816, Gadget Girls
+
+**OPR**: 5.343
+
+**P value**: 1.0
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+|  |  |  |  | 0.667 |
 
 ![4816 scores across all recorded matches](images/frc4816.png)
 
@@ -336,19 +354,19 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 4828, RoboEagles
+### 4829, Titanium Tigers
 
-**OPR**: 4.8458
+**OPR**: 18.4445
 
-**P value**: 0.47
+**P value**: 0.92
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 1.65 |
+|  |  |  |  | 1.111 |
 
-![4828 scores across all recorded matches](images/frc4828.png)
+![4829 scores across all recorded matches](images/frc4829.png)
 
 [Return to top](#at-a-glance)
 
@@ -356,15 +374,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 5160, Chargers
 
-**OPR**: 12.3988
+**OPR**: 13.1708
 
-**P value**: 0.3
+**P value**: 0.9
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.933 |
+| X |  | X |  | 0.778 |
 
 ![5160 scores across all recorded matches](images/frc5160.png)
 
@@ -372,35 +390,17 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 5190, Green Hope Falcons
-
-**OPR**: 17.7544
-
-**P value**: 0.12
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-|  | X |  | X | 0.9 |
-
-![5190 scores across all recorded matches](images/frc5190.png)
-
-[Return to top](#at-a-glance)
-
----
-
 ### 5511, Cortechs Robotics
 
-**OPR**: 23.9173
+**OPR**: 22.7546
 
-**P value**: 0.04
+**P value**: 0.84
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 2.842 |
+| X |  | X |  | 2.444 |
 
 ![5511 scores across all recorded matches](images/frc5511.png)
 
@@ -408,19 +408,19 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 5518, Techno Wolves
+### 5544, SWIFT Robotics
 
-**OPR**: 7.0043
+**OPR**: 25.9044
 
-**P value**: 0.55
+**P value**: 0.81
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X | X | X | X | 0.643 |
+|  |  |  |  | 1.111 |
 
-![5518 scores across all recorded matches](images/frc5518.png)
+![5544 scores across all recorded matches](images/frc5544.png)
 
 [Return to top](#at-a-glance)
 
@@ -428,15 +428,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 5607, Team Firewall
 
-**OPR**: 12.1203
+**OPR**: 16.0105
 
-**P value**: 0.29
+**P value**: 0.9
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.786 |
+|  |  |  |  | 0.778 |
 
 ![5607 scores across all recorded matches](images/frc5607.png)
 
@@ -444,37 +444,37 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 5762, FranklinBots - TEAM HYDRA
+### 6004, f(x) Robotics
 
-**OPR**: 15.544
+**OPR**: 13.4891
 
-**P value**: 0.22
+**P value**: 0.98
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.857 |
+|  |  |  |  | 1.333 |
 
-![5762 scores across all recorded matches](images/frc5762.png)
+![6004 scores across all recorded matches](images/frc6004.png)
 
 [Return to top](#at-a-glance)
 
 ---
 
-### 5919, JoCo RoBos
+### 6214, PHEnix
 
-**OPR**: 4.4862
+**OPR**: 18.2865
 
-**P value**: 0.64
+**P value**: 0.93
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.5 |
+|  |  |  |  | 0.778 |
 
-![5919 scores across all recorded matches](images/frc5919.png)
+![6214 scores across all recorded matches](images/frc6214.png)
 
 [Return to top](#at-a-glance)
 
@@ -482,15 +482,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 6215, Armored Eagles
 
-**OPR**: 1.1728
+**OPR**: 1.0829
 
-**P value**: 0.82
+**P value**: 1.0
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.417 |
+|  |  |  |  | 0.444 |
 
 ![6215 scores across all recorded matches](images/frc6215.png)
 
@@ -498,53 +498,17 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 6240, Eagles of the Knight
-
-**OPR**: -0.6684
-
-**P value**: 0.85
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.417 |
-
-![6240 scores across all recorded matches](images/frc6240.png)
-
-[Return to top](#at-a-glance)
-
----
-
-### 6332, Bull City Botics
-
-**OPR**: 4.4137
-
-**P value**: 0.74
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.611 |
-
-![6332 scores across all recorded matches](images/frc6332.png)
-
-[Return to top](#at-a-glance)
-
----
-
 ### 6426, Robo Gladiators
 
-**OPR**: 15.8847
+**OPR**: 6.9859
 
-**P value**: 0.24
+**P value**: 0.99
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.75 |
+|  |  |  |  | 0.778 |
 
 ![6426 scores across all recorded matches](images/frc6426.png)
 
@@ -554,15 +518,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 6500, GearCats
 
-**OPR**: 12.5134
+**OPR**: 23.818
 
-**P value**: 0.36
+**P value**: 0.84
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.5 |
+|  |  |  |  | 0.889 |
 
 ![6500 scores across all recorded matches](images/frc6500.png)
 
@@ -570,55 +534,55 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 6502, DARC SIDE
+### 6512, Coastal CATastrophe
 
-**OPR**: 6.7101
+**OPR**: 5.9898
 
-**P value**: 0.6
+**P value**: 1.0
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X | X | X | X | 0.5 |
+|  |  |  |  | 0.556 |
 
-![6502 scores across all recorded matches](images/frc6502.png)
+![6512 scores across all recorded matches](images/frc6512.png)
 
 [Return to top](#at-a-glance)
 
 ---
 
-### 6565, Team Bobcat
+### 6639, The Mechanical Minds 
 
-**OPR**: 11.397
+**OPR**: 16.0866
 
-**P value**: 0.47
+**P value**: 0.98
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 1.0 |
+|  |  |  |  | 0.889 |
 
-![6565 scores across all recorded matches](images/frc6565.png)
+![6639 scores across all recorded matches](images/frc6639.png)
 
 [Return to top](#at-a-glance)
 
 ---
 
-### 6908, Infuzed
+### 6729, RobCoBots
 
-**OPR**: 14.2329
+**OPR**: 13.6783
 
-**P value**: 0.21
+**P value**: 0.97
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.733 |
+|  |  |  |  | 0.778 |
 
-![6908 scores across all recorded matches](images/frc6908.png)
+![6729 scores across all recorded matches](images/frc6729.png)
 
 [Return to top](#at-a-glance)
 
@@ -626,15 +590,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 7029, Scotbotics
 
-**OPR**: 4.1798
+**OPR**: 13.4513
 
-**P value**: 0.61
+**P value**: 0.98
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.588 |
+| X |  | X |  | 0.667 |
 
 ![7029 scores across all recorded matches](images/frc7029.png)
 
@@ -642,17 +606,71 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 7463, Incandescent Mice
+### 7265, Skeleton Crew
 
-**OPR**: 8.8441
+**OPR**: 16.637
 
-**P value**: 0.49
+**P value**: 0.94
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.583 |
+|  |  |  |  | 0.778 |
+
+![7265 scores across all recorded matches](images/frc7265.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 7270, Pender Circuit Breakers
+
+**OPR**: 4.7914
+
+**P value**: 1.0
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+|  |  |  |  | 0.444 |
+
+![7270 scores across all recorded matches](images/frc7270.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 7443, Overhills Jag-Wires
+
+**OPR**: 18.9113
+
+**P value**: 0.95
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+|  |  |  |  | 0.889 |
+
+![7443 scores across all recorded matches](images/frc7443.png)
+
+[Return to top](#at-a-glance)
+
+---
+
+### 7463, Incandescent Mice
+
+**OPR**: 11.79
+
+**P value**: 0.98
+
+**Team Capabilities**:
+
+| low hatch | high hatch | low cargo | high cargo | average climb level |
+| :---: | :---: | :---: | :---: | --- |
+| X |  | X |  | 0.889 |
 
 ![7463 scores across all recorded matches](images/frc7463.png)
 
@@ -662,15 +680,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 7671, Fire Hazard
 
-**OPR**: 13.6605
+**OPR**: 22.1257
 
-**P value**: 0.23
+**P value**: 0.94
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.95 |
+| X |  | X |  | 1.0 |
 
 ![7671 scores across all recorded matches](images/frc7671.png)
 
@@ -680,15 +698,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 7675, Spark Guardians 
 
-**OPR**: 17.4784
+**OPR**: 11.381
 
-**P value**: 0.15
+**P value**: 0.98
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.75 |
+|  |  |  |  | 0.778 |
 
 ![7675 scores across all recorded matches](images/frc7675.png)
 
@@ -698,15 +716,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 7715, Robo-Banditos
 
-**OPR**: 6.095
+**OPR**: 6.6392
 
-**P value**: 0.56
+**P value**: 0.98
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.417 |
+|  |  |  |  | 0.667 |
 
 ![7715 scores across all recorded matches](images/frc7715.png)
 
@@ -716,15 +734,15 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ### 7739, Royal Tech Warriors
 
-**OPR**: 1.321
+**OPR**: 7.2793
 
-**P value**: 0.88
+**P value**: 0.99
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-|  |  |  |  | 0.333 |
+|  |  |  |  | 0.444 |
 
 ![7739 scores across all recorded matches](images/frc7739.png)
 
@@ -732,37 +750,19 @@ team | opr | z score percentile thing | low hatch | high hatch | low cargo | hig
 
 ---
 
-### 7763, Carrborobotics
+### 7890, SeQuEnCe
 
-**OPR**: 13.4278
+**OPR**: 15.3878
 
-**P value**: 0.25
-
-**Team Capabilities**:
-
-| low hatch | high hatch | low cargo | high cargo | average climb level |
-| :---: | :---: | :---: | :---: | --- |
-| X |  | X |  | 0.8 |
-
-![7763 scores across all recorded matches](images/frc7763.png)
-
-[Return to top](#at-a-glance)
-
----
-
-### 900, The Zebracorns
-
-**OPR**: 14.4742
-
-**P value**: 0.11
+**P value**: 0.93
 
 **Team Capabilities**:
 
 | low hatch | high hatch | low cargo | high cargo | average climb level |
 | :---: | :---: | :---: | :---: | --- |
-| X | X | X | X | 1.778 |
+|  |  |  |  | 1.667 |
 
-![900 scores across all recorded matches](images/frc900.png)
+![7890 scores across all recorded matches](images/frc7890.png)
 
 [Return to top](#at-a-glance)
 

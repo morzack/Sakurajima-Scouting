@@ -65,10 +65,12 @@ class SiteGenerator:
                     if alliance != "None" and climbLevel != -1:
                         teamClimbs[teamKey] = [teamClimbs[teamKey][0]+climbLevel, teamClimbs[teamKey][1]+1]
 
+            f = open('dump.txt', 'w')
+
             # display the skill breakdown for each team
             siteFile.write("\n\n### Team skill breakdown")
-            siteFile.write("\n\nteam | opr | z score percentile thing | low hatch | high hatch | low cargo | high cargo | average climb level")
-            siteFile.write("\n--- | --- | --- | :---: | :---: | :---: | :---: | :---:")
+            siteFile.write("\n\nteam | opr | z score percentile thing | opr/zs |  low hatch | high hatch | low cargo | high cargo | average climb level")
+            siteFile.write("\n--- | --- | --- | --- | :---: | :---: | :---: | :---: | :---:")
             zscoredict = {}
             for opr in sorted(teamOprs)[::-1]:
                 teamKey = opr[2]
@@ -79,7 +81,9 @@ class SiteGenerator:
                 lowCargo = "X" if teamNum in qualitiativeData['cargo']['low'] else ""
                 highCargo = "X" if teamNum in qualitiativeData['cargo']['high'] else ""
                 climb = round(teamClimbs[teamKey][0]/teamClimbs[teamKey][1], 3) if teamClimbs[teamKey][1] > 0 else 0
-                siteFile.write("\n[Team {}](#{}) | {} | {} | {} | {} | {} | {} | {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0], teamZscore, lowHatch, highHatch, lowCargo, highCargo, climb))
+                oprZs = opr[0] / teamZscore
+                f.write("{} {}\n".format(opr[1], oprZs))
+                siteFile.write("\n[Team {}](#{}) | {} | {} | {} | {} | {} | {} | {} | {}".format(opr[1], opr[1].strip().lower().translate(stringTranslator).replace(" ", "-"), opr[0], teamZscore, oprZs, lowHatch, highHatch, lowCargo, highCargo, climb))
                 zscoredict[teamKey] = teamZscore
 
             # then add images and opr

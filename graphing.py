@@ -31,7 +31,8 @@ class EventGrapher:
         for match in self.matches:
             if match['comp_level'] == 'qm':
                 for alliance in ['red', 'blue']:
-                    matchScores.append(match['alliances'][alliance]['score'])
+                    if (match['alliances'][alliance]['score']) > 0:
+                        matchScores.append(match['alliances'][alliance]['score'])
         matchScores = np.array(matchScores)
         self.scoreMean = np.mean(matchScores)
         self.scoreMedian = np.median(matchScores)
