@@ -13,13 +13,6 @@ key = secret_json['tba-key']
 
 tba_client = tbapy.TBA(key)
 
-# download data
-event = sys.argv[1]
-
-event_oprs = tba_client.event_oprs(event)
-event_teams = tba_client.event_teams(event, keys=True)
-event_matches = tba_client.event_matches(event)
-
 # prune match data json to something that we care about
 
 parse_init_line = {
@@ -84,29 +77,39 @@ def prune_alliance_score(score_breakdown):
         'points_scored': score_breakdown['totalPoints'] - score_breakdown['foulPoints']
     }
 
-matches = {}
-for match in event_matches:
-    matches[match['key']] = {
-        'key': match['key'],
-        'match_type': match['comp_level'],
-        'number': match['match_number'],
+def download_event_data(event):
+    event_oprs = tba_client.event_oprs(event)
+    event_teams = tba_client.event_teams(event, keys=True)
+    event_matches = tba_client.event_matches(event)
 
-        'alliances': {
-            'red': {
-                'team_keys': match['alliances']['red']['team_keys'],
-                'score_breakdown': prune_alliance_score(match['score_breakdown']['red'])
+    matches = {}
+    for match in event_matches:
+        matches[match['key']] = {
+            'key': match['key'],
+            'match_type': match['comp_level'],
+            'number': match['match_number'],
+
+            'alliances': {
+                'red': {
+                    'team_keys': match['alliances']['red']['team_keys'],
+                    'score_breakdown': prune_alliance_score(match['score_breakdown']['red'])
+                },
+                'blue': {
+                    'team_keys': match['alliances']['blue']['team_keys'],
+                    'score_breakdown': prune_alliance_score(match['score_breakdown']['blue'])
+                }
             },
-            'blue': {
-                'team_keys': match['alliances']['blue']['team_keys'],
-                'score_breakdown': prune_alliance_score(match['score_breakdown']['blue'])
-            }
-        },
-    }
+        }
 
-# save the data for later use
-with open(f'data/{event}.json', 'w') as f:
-    json.dump({
-        'matches': matches,
-        'oprs': event_oprs['oprs'],
-        'teams': event_teams
-    }, f)
+    # save the data for later use
+    with open(f'data/{event}.json', 'w') as f:
+        json.dump({
+            'matches': matches,
+            'oprs': event_oprs['oprs'],
+            'teams': event_teams
+        }, f)
+
+# download data
+events = sys.argv[1:]
+for event in events:
+    download_event_data(event)
