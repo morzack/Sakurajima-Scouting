@@ -92,11 +92,15 @@ def load_data_event(event):
     # get team scores into a dataframe
     team_scores = []
     for _, match in qualification_matches.iterrows():
-        for team in match['blue_keys']:
-            team_scores.append([team] + get_match_team_data_breakdown(match, 'blue'))
-        for team in match['red_keys']:
-            team_scores.append([team] + get_match_team_data_breakdown(match, 'red'))
-    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells'])
+        for i, team in enumerate(match['blue_keys']):
+            team_scores.append(
+                [team] + get_match_team_data_breakdown(match, 'blue') + [match[f'blue_{i+1}_endgame']]
+            )
+        for i, team in enumerate(match['red_keys']):
+            team_scores.append(
+                [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']]
+            )
+    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame'])
     team_scores = team_scores.sort_values(by=['team_key'])
 
     # get generic team data into a dataframe
@@ -112,8 +116,9 @@ def load_data_event(event):
             np.mean(get_feature(team, team_scores, 'outer_teleop_cells')),
             np.mean(get_feature(team, team_scores, 'inner_auto_cells')),
             np.mean(get_feature(team, team_scores, 'inner_teleop_cells')),
+            np.mean(get_feature(team, team_scores, 'endgame'))
         ])
-    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_bottom_auto_cells', 'mean_bottom_teleop_cells', 'mean_outer_auto_cells', 'mean_outer_teleop_cells', 'mean_inner_auto_cells', 'mean_inner_teleop_cells'])
+    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_bottom_auto_cells', 'mean_bottom_teleop_cells', 'mean_outer_auto_cells', 'mean_outer_teleop_cells', 'mean_inner_auto_cells', 'mean_inner_teleop_cells', 'mean_endgame'])
     team_data.sort_values(by=['mean_score'])
 
     # get component opr into a dataframe
@@ -128,9 +133,10 @@ def load_data_event(event):
             calculate_oprs('cells_inner_teleop')[i][0],
             calculate_oprs('cells_outer_auto')[i][0],
             calculate_oprs('cells_outer_teleop')[i][0],
+            team_data.loc[team_data['team_key'] == team].iloc[0]['mean_endgame'],
             team_data.loc[team_data['team_key'] == team].iloc[0]['mean_score']
         ])
-    team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=['team_key', 'points_scored', 'cells_bottom_auto', 'cells_bottom_teleop', 'cells_inner_auto', 'cells_inner_teleop', 'cells_outer_auto', 'cells_outer_teleop', 'mean_score'])
+    team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=['team_key', 'points_scored', 'cells_bottom_auto', 'cells_bottom_teleop', 'cells_inner_auto', 'cells_inner_teleop', 'cells_outer_auto', 'cells_outer_teleop', 'mean_endgame', 'mean_score'])
     team_component_opr_data.sort_values(by='points_scored')
 
     return qualification_matches, team_scores, team_data, team_component_opr_data
