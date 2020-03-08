@@ -84,22 +84,23 @@ def download_event_data(event):
 
     matches = {}
     for match in event_matches:
-        matches[match['key']] = {
-            'key': match['key'],
-            'match_type': match['comp_level'],
-            'number': match['match_number'],
+        if match['actual_time'] != None:
+            matches[match['key']] = {
+                'key': match['key'],
+                'match_type': match['comp_level'],
+                'number': match['match_number'],
 
-            'alliances': {
-                'red': {
-                    'team_keys': match['alliances']['red']['team_keys'],
-                    'score_breakdown': prune_alliance_score(match['score_breakdown']['red'])
+                'alliances': {
+                    'red': {
+                        'team_keys': match['alliances']['red']['team_keys'],
+                        'score_breakdown': prune_alliance_score(match['score_breakdown']['red'])
+                    },
+                    'blue': {
+                        'team_keys': match['alliances']['blue']['team_keys'],
+                        'score_breakdown': prune_alliance_score(match['score_breakdown']['blue'])
+                    }
                 },
-                'blue': {
-                    'team_keys': match['alliances']['blue']['team_keys'],
-                    'score_breakdown': prune_alliance_score(match['score_breakdown']['blue'])
-                }
-            },
-        }
+            }
 
     # save the data for later use
     with open(f'data/{event}.json', 'w') as f:
