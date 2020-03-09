@@ -2,6 +2,8 @@ import json
 import pandas as pd
 import numpy as np
 
+import statUtils
+
 from collections import defaultdict
 def load_data_event(event):
     # load saved data (make sure to download w/ downloadData.py)
@@ -121,22 +123,28 @@ def load_data_event(event):
     team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_bottom_auto_cells', 'mean_bottom_teleop_cells', 'mean_outer_auto_cells', 'mean_outer_teleop_cells', 'mean_inner_auto_cells', 'mean_inner_teleop_cells', 'mean_endgame'])
     team_data.sort_values(by=['mean_score'])
 
+    opr_features = ['points_scored', 'cells_bottom_auto', 'cells_bottom_teleop', 'cells_inner_auto', 'cells_inner_teleop', 'cells_outer_auto', 'cells_outer_teleop']
+
     # get component opr into a dataframe
     team_component_opr_data = []
     for i, team in enumerate(teams):
-        team_component_opr_data.append([
-            team,
-            calculate_oprs('points_scored')[i][0],
-            calculate_oprs('cells_bottom_auto')[i][0],
-            calculate_oprs('cells_bottom_teleop')[i][0],
-            calculate_oprs('cells_inner_auto')[i][0],
-            calculate_oprs('cells_inner_teleop')[i][0],
-            calculate_oprs('cells_outer_auto')[i][0],
-            calculate_oprs('cells_outer_teleop')[i][0],
+        adding = [team]
+        for feature in opr_features:
+            opr_prediction, std = statUtils.residual_team(team, qualification_matches, teams, feature)
+            adding += [opr_prediction, std]
+        adding += [
             team_data.loc[team_data['team_key'] == team].iloc[0]['mean_endgame'],
             team_data.loc[team_data['team_key'] == team].iloc[0]['mean_score']
-        ])
-    team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=['team_key', 'points_scored', 'cells_bottom_auto', 'cells_bottom_teleop', 'cells_inner_auto', 'cells_inner_teleop', 'cells_outer_auto', 'cells_outer_teleop', 'mean_endgame', 'mean_score'])
+        ]
+
+        team_component_opr_data.append(adding)
+
+    column_names = ['team_key']
+    for i in opr_features:
+        column_names += [f'{i}', f'{i}_std']
+    column_names += ['mean_endgame', 'mean_score']
+
+    team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=column_names)
     team_component_opr_data.sort_values(by='points_scored')
 
     return qualification_matches, team_scores, team_data, team_component_opr_data
