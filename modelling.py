@@ -132,23 +132,26 @@ class ScoreModelOpr:
         mean, interval = self.score_model.predict_team(team_key, confidence, self.oprs, self.team_data)
         return (mean-interval, mean+interval)
 
-    def estimate_match_victor(self, red_alliance_keys, blue_alliance_keys, confidence_bounds=(.66, .99), confidence_step=.01):
+    def estimate_match_victor(self, red_alliance_keys, blue_alliance_keys, confidence_bounds=(.5, .99), confidence_step=.01):
         # estimate the victor of a match and return how confident we are about the prediction
         # TODO make this a binary search to improve performance
         confidence = confidence_bounds[1]+confidence_step
-        while confidence > confidence_bounds[0]:            
+        while confidence > confidence_bounds[0]:
             confidence -= confidence_step
             
             red_interval = self.predict_alliance_confidence(red_alliance_keys, confidence)
             blue_interval = self.predict_alliance_confidence(blue_alliance_keys, confidence)
 
-            if not ((blue_interval[0] < red_interval[0] < blue_interval[1]) or (blue_interval[0] < red_interval[1] < blue_interval[1])):
+            if not (
+                (blue_interval[0] < red_interval[0] < blue_interval[1]) or (blue_interval[0] < red_interval[1] < blue_interval[1]) or
+                (red_interval[0] < blue_interval[0] < red_interval[1]) or (red_interval[0] < blue_interval[1] < red_interval[1])
+                ):
                 break
 
         predicted_victor = 'red' if red_interval[0] > blue_interval[1] else 'blue'
         return predicted_victor, confidence
 
-    def predict_scores_event(self, qualification_matches, confidence_bounds=(.66, .99), confidence_step=.01, feedback=False):
+    def predict_scores_event(self, qualification_matches, confidence_bounds=(.5, .99), confidence_step=.01, feedback=False):
         # predict scores for matches at an event
         # note that when using feedback, this doesn't take penalties into account for the score.
         # this is a potentially fatal flaw with the model, but I haven't seen any issues so far.
