@@ -96,13 +96,13 @@ def load_data_event(event):
     for _, match in qualification_matches.iterrows():
         for i, team in enumerate(match['blue_keys']):
             team_scores.append(
-                [team] + get_match_team_data_breakdown(match, 'blue') + [match[f'blue_{i+1}_endgame']]
+                [team] + get_match_team_data_breakdown(match, 'blue') + [match[f'blue_{i+1}_endgame']] + [match['match_number']]
             )
         for i, team in enumerate(match['red_keys']):
             team_scores.append(
-                [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']]
+                [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']] + [match['match_number']]
             )
-    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame'])
+    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame', 'match_number'])
     team_scores = team_scores.sort_values(by=['team_key'])
 
     # get generic team data into a dataframe
