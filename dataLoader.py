@@ -128,7 +128,7 @@ def load_data_event(event):
     # get component opr into a dataframe
     team_component_opr_data = []
     for i, team in enumerate(teams):
-        adding = [team]
+        adding = [team, team_scores.loc[team_scores['team_key'] == team].shape[0]]
         for feature in opr_features:
             opr_prediction, std = statUtils.residual_team(team, qualification_matches, teams, feature)
             adding += [opr_prediction, std]
@@ -139,7 +139,7 @@ def load_data_event(event):
 
         team_component_opr_data.append(adding)
 
-    column_names = ['team_key']
+    column_names = ['team_key', 'matches_played']
     for i in opr_features:
         column_names += [f'{i}', f'{i}_std']
     column_names += ['mean_endgame', 'mean_score']
