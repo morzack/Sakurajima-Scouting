@@ -83,6 +83,7 @@ def download_event_data(event):
     event_matches = tba_client.event_matches(event)
 
     matches = {}
+    unplayed_matches = {}
     for match in event_matches:
         if match['actual_time'] != None:
             matches[match['key']] = {
@@ -101,11 +102,27 @@ def download_event_data(event):
                     }
                 },
             }
+        else:
+            unplayed_matches[match['key']] = {
+                'key': match['key'],
+                'match_type': match['comp_level'],
+                'number': match['match_number'],
+
+                'alliances': {
+                    'red': {
+                        'team_keys': match['alliances']['red']['team_keys'],
+                    },
+                    'blue': {
+                        'team_keys': match['alliances']['blue']['team_keys'],
+                    }
+                },
+            }
 
     # save the data for later use
     with open(f'data/{event}.json', 'w') as f:
         json.dump({
             'matches': matches,
+            'unplayed_matches': unplayed_matches,
             'oprs': event_oprs['oprs'],
             'teams': event_teams
         }, f)

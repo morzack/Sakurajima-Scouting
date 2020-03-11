@@ -18,8 +18,12 @@ background_color = sns.xkcd_rgb['white']
 
 def get_matches_played(team_key, qualification_matches, team_scores):
     # get dataframes of score breakdowns and match data for matches a team is in
+    match_nums = []
+    for _, match in qualification_matches.iterrows():
+        if team_key in [match['red_1_key'], match['red_2_key'], match['red_3_key'], match['blue_1_key'], match['blue_2_key'], match['blue_3_key']]:
+            match_nums.append(match['match_number'])
     match_scores_played = team_scores.loc[team_scores['team_key'] == team_key]
-    matches_played = qualification_matches.loc[qualification_matches['match_number'].isin(match_scores_played['match_number'])]
+    matches_played = qualification_matches.loc[qualification_matches['match_number'].isin(match_nums)]
     return match_scores_played, matches_played
 
 def gen_team_summary(team_key, qualification_matches, team_scores, team_data, filename='plots/out.png', feature='team_score'):
@@ -61,7 +65,6 @@ def gen_team_summary(team_key, qualification_matches, team_scores, team_data, fi
     plt.title(f'Percentile plot of {feature} for {team_key}')
 
     plt.savefig(filename, bbox_inches='tight')
-    plt.clf()
 
 def predict_matches(score_prediction_model, team_key, qualification_matches, team_scores):
     # get a dataframe with match predictions
