@@ -73,9 +73,9 @@ def predict_matches(score_prediction_model, team_key, qualification_matches, tea
         qual_match_data = matches_played.loc[matches_played['match_number'] == match['match_number']].iloc[0]
         color = 'red' if team_key in [qual_match_data['red_1_key'], qual_match_data['red_2_key'], qual_match_data['red_3_key']] else 'blue'
         predicted_results_team.append([
-            match['match_number'], match['confidence'], 'win' if match['predicted_victor'] == color else 'lose'
+            match['match_number'], modelling.get_probability(match['confidence']), 'win' if match['predicted_victor'] == color else 'lose'
         ])
-    predicted_results_team = pd.DataFrame(predicted_results_team, columns=['match_num', 'confidence', 'predicted_result'])
-    predicted_results_team.sort_values('match_num')
+    predicted_results_team = pd.DataFrame(predicted_results_team, columns=['match_num', 'probability', 'predicted_result'])
+    predicted_results_team = predicted_results_team.sort_values('match_num')
 
     return predicted_results_team

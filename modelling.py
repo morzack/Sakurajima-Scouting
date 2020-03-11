@@ -163,15 +163,22 @@ class ScoreModelOpr:
 
             predicted_victor, confidence = self.estimate_match_victor(red_keys, blue_keys, confidence_bounds, confidence_step)
 
-            adding = [match['match_number'], confidence, predicted_victor]
+            adding = [match['match_number'], confidence, get_probability(confidence), predicted_victor]
             if feedback:
                 adding += ['red' if match['red_points_scored'] > match['blue_points_scored'] else 'blue']
 
             match_predictions.append(adding)
-        columns = ['match_number', 'confidence', 'predicted_victor']
+        columns = ['match_number', 'confidence', 'probability', 'predicted_victor']
         if feedback:
             columns += ['actual_victor']
         return pd.DataFrame(match_predictions, columns=columns)
+
+def get_probability(confidence):
+    # get probability given confidence
+    # these are hard coded in so
+    # NOTE this _only works_ for v1 models
+    estimated_probability = .01997 * ((confidence*100) ** .735017) + .450206
+    return min(max(estimated_probability, .01), .99)
 
 if __name__ == '__main__':
     score_model_complete = ScoreModelOpr(
