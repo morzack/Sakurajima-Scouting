@@ -19,6 +19,20 @@ def load_data_event(event):
     def flatten_data_matches(matches, played=True):
         data_dict = defaultdict(list)
 
+        data_dict['match_key'] == []
+        data_dict['match_type'] == []
+        data_dict['match_number'] == []
+
+        data_dict['red_1_key'] == []
+        data_dict['red_2_key'] == []
+        data_dict['red_3_key'] == []
+        data_dict['red_keys'] == []
+
+        data_dict['blue_1_key'] == []
+        data_dict['blue_2_key'] == []
+        data_dict['blue_3_key'] == []
+        data_dict['blue_keys'] == []
+
         for match in matches:
             match_data = matches[match]
             
