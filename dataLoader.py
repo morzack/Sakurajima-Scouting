@@ -11,12 +11,27 @@ def load_data_event(event):
         json_data = json.load(f)
 
     matches = json_data['matches']
+    unplayed_matches = json_data['unplayed_matches']
     oprs = json_data['oprs']
     teams = json_data['teams']
 
     # parse into pandas dataframe
-    def flatten_data_matches(json_data):
+    def flatten_data_matches(matches, played=True):
         data_dict = defaultdict(list)
+
+        data_dict['match_key'] == []
+        data_dict['match_type'] == []
+        data_dict['match_number'] == []
+
+        data_dict['red_1_key'] == []
+        data_dict['red_2_key'] == []
+        data_dict['red_3_key'] == []
+        data_dict['red_keys'] == []
+
+        data_dict['blue_1_key'] == []
+        data_dict['blue_2_key'] == []
+        data_dict['blue_3_key'] == []
+        data_dict['blue_keys'] == []
 
         for match in matches:
             match_data = matches[match]
@@ -31,23 +46,24 @@ def load_data_event(event):
                     data_dict[f"{alliance_color}_{robot_num+1}_key"].append(robot_key)
                 data_dict[f"{alliance_color}_keys"].append(alliance_data['team_keys'])
                 
-                score_breakdown = alliance_data['score_breakdown']
-                
-                data_dict[f"{alliance_color}_endgame_level"].append(score_breakdown['endgame_level'])
-                data_dict[f"{alliance_color}_foul_count"].append(score_breakdown['foul_count'])
-                data_dict[f"{alliance_color}_points_scored"].append(score_breakdown['points_scored'])
-                data_dict[f"{alliance_color}_max_stage"].append(score_breakdown['max_stage'])
-                data_dict[f"{alliance_color}_hang_rp"].append(score_breakdown['rp']['shield_operational'])
-                data_dict[f"{alliance_color}_wheel_rp"].append(score_breakdown['rp']['shield_energized'])
-                
-                for robot_num, init_line_points in enumerate(score_breakdown['init_lines']):
-                    data_dict[f"{alliance_color}_{robot_num+1}_init_line"].append(init_line_points)
-                for robot_num, endgame_points in enumerate(score_breakdown['endgames']):
-                    data_dict[f"{alliance_color}_{robot_num+1}_endgame"].append(endgame_points)
-                
-                for cell_placement in ['bottom', 'outer', 'inner']:
-                    for opmode in ['auto', 'teleop']:
-                        data_dict[f"{alliance_color}_cells_{cell_placement}_{opmode}"].append(score_breakdown['cells'][cell_placement][opmode])
+                if played:
+                    score_breakdown = alliance_data['score_breakdown']
+                    
+                    data_dict[f"{alliance_color}_endgame_level"].append(score_breakdown['endgame_level'])
+                    data_dict[f"{alliance_color}_foul_count"].append(score_breakdown['foul_count'])
+                    data_dict[f"{alliance_color}_points_scored"].append(score_breakdown['points_scored'])
+                    data_dict[f"{alliance_color}_max_stage"].append(score_breakdown['max_stage'])
+                    data_dict[f"{alliance_color}_hang_rp"].append(score_breakdown['rp']['shield_operational'])
+                    data_dict[f"{alliance_color}_wheel_rp"].append(score_breakdown['rp']['shield_energized'])
+                    
+                    for robot_num, init_line_points in enumerate(score_breakdown['init_lines']):
+                        data_dict[f"{alliance_color}_{robot_num+1}_init_line"].append(init_line_points)
+                    for robot_num, endgame_points in enumerate(score_breakdown['endgames']):
+                        data_dict[f"{alliance_color}_{robot_num+1}_endgame"].append(endgame_points)
+                    
+                    for cell_placement in ['bottom', 'outer', 'inner']:
+                        for opmode in ['auto', 'teleop']:
+                            data_dict[f"{alliance_color}_cells_{cell_placement}_{opmode}"].append(score_breakdown['cells'][cell_placement][opmode])
                 
         df = pd.DataFrame(data=data_dict)
         return df
@@ -88,21 +104,24 @@ def load_data_event(event):
         opr_matrix = np.linalg.pinv(left_matrix).dot(right_matrix)
         return opr_matrix
 
-    all_match_data = flatten_data_matches(json_data)
+    all_match_data = flatten_data_matches(matches)
     qualification_matches = all_match_data.loc[all_match_data['match_type'] == 'qm']
+
+    all_unplayed_matches = flatten_data_matches(unplayed_matches, played=False)
+    qualification_matches_unplayed = all_unplayed_matches.loc[all_unplayed_matches['match_type'] == 'qm']
 
     # get team scores into a dataframe
     team_scores = []
     for _, match in qualification_matches.iterrows():
         for i, team in enumerate(match['blue_keys']):
             team_scores.append(
-                [team] + get_match_team_data_breakdown(match, 'blue') + [match[f'blue_{i+1}_endgame']]
+                [team] + get_match_team_data_breakdown(match, 'blue') + [match[f'blue_{i+1}_endgame']] + [match['match_number']]
             )
         for i, team in enumerate(match['red_keys']):
             team_scores.append(
-                [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']]
+                [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']] + [match['match_number']]
             )
-    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame'])
+    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame', 'match_number'])
     team_scores = team_scores.sort_values(by=['team_key'])
 
     # get generic team data into a dataframe
@@ -147,4 +166,15 @@ def load_data_event(event):
     team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=column_names)
     team_component_opr_data.sort_values(by='points_scored')
 
-    return qualification_matches, team_scores, team_data, team_component_opr_data
+    return qualification_matches, qualification_matches_unplayed, team_scores, team_data, team_component_opr_data
+
+def normalize_opr(i):
+    # helper functionto normalize OPRs to point values
+    team_component_opr_normalized = i.copy(deep=True)
+    team_component_opr_normalized['cells_bottom_auto'] *= 2
+    team_component_opr_normalized['cells_bottom_teleop'] *= 1
+    team_component_opr_normalized['cells_inner_auto'] *= 6
+    team_component_opr_normalized['cells_inner_teleop'] *= 3
+    team_component_opr_normalized['cells_outer_auto'] *= 4
+    team_component_opr_normalized['cells_outer_teleop'] *= 2
+    return team_component_opr_normalized

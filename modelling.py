@@ -132,23 +132,26 @@ class ScoreModelOpr:
         mean, interval = self.score_model.predict_team(team_key, confidence, self.oprs, self.team_data)
         return (mean-interval, mean+interval)
 
-    def estimate_match_victor(self, red_alliance_keys, blue_alliance_keys, confidence_bounds=(.66, .99), confidence_step=.01):
+    def estimate_match_victor(self, red_alliance_keys, blue_alliance_keys, confidence_bounds=(.5, .99), confidence_step=.01):
         # estimate the victor of a match and return how confident we are about the prediction
         # TODO make this a binary search to improve performance
         confidence = confidence_bounds[1]+confidence_step
-        while confidence > confidence_bounds[0]:            
+        while confidence > confidence_bounds[0]:
             confidence -= confidence_step
             
             red_interval = self.predict_alliance_confidence(red_alliance_keys, confidence)
             blue_interval = self.predict_alliance_confidence(blue_alliance_keys, confidence)
 
-            if not ((blue_interval[0] < red_interval[0] < blue_interval[1]) or (blue_interval[0] < red_interval[1] < blue_interval[1])):
+            if not (
+                (blue_interval[0] < red_interval[0] < blue_interval[1]) or (blue_interval[0] < red_interval[1] < blue_interval[1]) or
+                (red_interval[0] < blue_interval[0] < red_interval[1]) or (red_interval[0] < blue_interval[1] < red_interval[1])
+                ):
                 break
 
         predicted_victor = 'red' if red_interval[0] > blue_interval[1] else 'blue'
         return predicted_victor, confidence
 
-    def predict_scores_event(self, qualification_matches, confidence_bounds=(.66, .99), confidence_step=.01, feedback=False):
+    def predict_scores_event(self, qualification_matches, confidence_bounds=(.5, .99), confidence_step=.01, feedback=False):
         # predict scores for matches at an event
         # note that when using feedback, this doesn't take penalties into account for the score.
         # this is a potentially fatal flaw with the model, but I haven't seen any issues so far.
@@ -160,15 +163,22 @@ class ScoreModelOpr:
 
             predicted_victor, confidence = self.estimate_match_victor(red_keys, blue_keys, confidence_bounds, confidence_step)
 
-            adding = [match['match_number'], confidence, predicted_victor]
+            adding = [match['match_number'], confidence, get_probability(confidence), predicted_victor]
             if feedback:
                 adding += ['red' if match['red_points_scored'] > match['blue_points_scored'] else 'blue']
 
             match_predictions.append(adding)
-        columns = ['match_number', 'confidence', 'predicted_victor']
+        columns = ['match_number', 'confidence', 'probability', 'predicted_victor']
         if feedback:
             columns += ['actual_victor']
         return pd.DataFrame(match_predictions, columns=columns)
+
+def get_probability(confidence):
+    # get probability given confidence
+    # these are hard coded in so
+    # NOTE this _only works_ for v1 models
+    estimated_probability = .01997 * ((confidence*100) ** .735017) + .450206
+    return min(max(estimated_probability, .01), .99)
 
 if __name__ == '__main__':
     score_model_complete = ScoreModelOpr(
