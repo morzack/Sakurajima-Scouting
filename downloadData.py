@@ -77,7 +77,14 @@ def prune_alliance_score(score_breakdown):
         'points_scored': score_breakdown['totalPoints'] - score_breakdown['foulPoints']
     }
 
-def download_event_data(event):
+def download_event_data(event, output_folder="data/", week_filter=None):
+    event_data = tba_client.event(event)
+    if event_data["week"] is None and week_filter is not None:
+        return False
+    event_week = event_data["week"] + 1
+    if week_filter is not None and week_filter != event_week:
+        return False
+    
     event_oprs = tba_client.event_oprs(event)
     event_teams = tba_client.event_teams(event, keys=True)
     event_matches = tba_client.event_matches(event)
@@ -119,15 +126,49 @@ def download_event_data(event):
             }
 
     # save the data for later use
-    with open(f'data/{event}.json', 'w') as f:
+    with open(f'{output_folder}/{event}.json', 'w') as f:
         json.dump({
             'matches': matches,
             'unplayed_matches': unplayed_matches,
-            'oprs': event_oprs['oprs'],
+            'oprs': event_oprs['oprs'] if 'oprs' in event_oprs else {},
             'teams': event_teams
         }, f)
 
-# download data
-events = sys.argv[1:]
-for event in events:
-    download_event_data(event)
+def main():
+    if sys.argv[1] == "--list-events":
+        events = tba_client.events(int(sys.argv[2]), keys=True)
+        print(" ".join(events))
+        return
+    
+    if sys.argv[1] == "--smart-download":
+        year = int(sys.argv[2])
+        week = None
+        save_dir = "data/"
+        if len(sys.argv) > 3:
+            week = int(sys.argv[3])
+        if len(sys.argv) > 4:
+            save_dir = sys.argv[4]
+        events = tba_client.events(int(sys.argv[2]), keys=True)
+        for event in events:
+            download_event_data(event, save_dir, week)
+        
+        return
+    
+    if sys.argv[1] == "--help":
+        print("downloadData.py")
+        print("--list-events [year]")
+        print("\tget all events in a given year")
+        print("--smart-download [year] [week] [dir]")
+        print("\tdownload all events from a given year (and optional week)")
+        print("\tthese will automatically be placed in data/, unless dir is specified")
+        print("downloadData.py [event] [event2] [event3]")
+        print("\tdownload data for given events into data/")
+        return
+
+    # download data
+    events = sys.argv[1:]
+    for event in events:
+        download_event_data(event)
+
+if __name__ == "__main__":
+    main()
