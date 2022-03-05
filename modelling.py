@@ -177,7 +177,8 @@ def get_probability(confidence):
     # get probability given confidence
     # these are hard coded in so
     # NOTE this _only works_ for v1 models
-    estimated_probability = .01997 * ((confidence*100) ** .735017) + .450206
+    # estimated_probability = .01997 * ((confidence*100) ** .735017) + .450206
+    estimated_probability = confidence
     return min(max(estimated_probability, .01), .99)
 
 if __name__ == '__main__':
