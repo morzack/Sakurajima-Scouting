@@ -132,9 +132,10 @@ def load_data_event(event):
             np.mean(get_feature(team, team_scores, 'lower_teleop_cargo')),
             np.mean(get_feature(team, team_scores, 'upper_auto_cargo')),
             np.mean(get_feature(team, team_scores, 'upper_teleop_cargo')),
-            np.mean(get_feature(team, team_scores, 'endgame'))
+            np.mean(get_feature(team, team_scores, 'endgame')),
+            np.std(get_feature(team, team_scores, 'endgame'))
         ])
-    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_lower_auto_cargo', 'mean_lower_teleop_cargo', 'mean_upper_auto_cargo', 'mean_upper_teleop_cargo', 'mean_endgame'])
+    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_lower_auto_cargo', 'mean_lower_teleop_cargo', 'mean_upper_auto_cargo', 'mean_upper_teleop_cargo', 'mean_endgame', 'mean_endgame_std'])
     team_data.sort_values(by=['mean_score'])
 
     opr_features = ['points_scored', 'cargo_lower_auto', 'cargo_lower_teleop', 'cargo_upper_auto', 'cargo_upper_teleop']
@@ -148,6 +149,7 @@ def load_data_event(event):
             adding += [opr_prediction, std]
         adding += [
             team_data.loc[team_data['team_key'] == team].iloc[0]['mean_endgame'],
+            team_data.loc[team_data['team_key'] == team].iloc[0]['mean_endgame_std'],
             team_data.loc[team_data['team_key'] == team].iloc[0]['mean_score']
         ]
 
@@ -156,7 +158,7 @@ def load_data_event(event):
     column_names = ['team_key', 'matches_played']
     for i in opr_features:
         column_names += [f'{i}', f'{i}_std']
-    column_names += ['mean_endgame', 'mean_score']
+    column_names += ['mean_endgame', 'mean_endgame_std', 'mean_score']
 
     team_component_opr_data = pd.DataFrame(team_component_opr_data, columns=column_names)
     team_component_opr_data.sort_values(by='points_scored')
