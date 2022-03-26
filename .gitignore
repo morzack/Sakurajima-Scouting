@@ -2,7 +2,7 @@
 secret.json
 config.json
 
-data/*
+data*/*
 plots/*
 
 # Byte-compiled / optimized / DLL files

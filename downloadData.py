@@ -15,33 +15,25 @@ tba_client = tbapy.TBA(key)
 
 # prune match data json to something that we care about
 
-parse_init_line = {
-    'None': 0,
-    'Exited': 5
+parse_taxi = {
+    'Yes': 2,
+    'No': 0
 }
 
 parse_endgame = {
-    'None': 0,
-    'Park': 5,
-    'Hang': 25
+    'Traversal': 15,
+    'High': 10,
+    'Mid': 6,
+    'Low': 4,
+    'None': 0
 }
-
-def get_stage(score_breakdown):
-    if score_breakdown['stage1Activated']:
-        return 1
-    elif score_breakdown['stage2Activated']:
-        return 2
-    elif score_breakdown['stage3Activated']:
-        return 3
-    else:
-        return 0
 
 def prune_alliance_score(score_breakdown):
     return {
-        'init_lines': [
-            parse_init_line[score_breakdown['initLineRobot1']],
-            parse_init_line[score_breakdown['initLineRobot2']],
-            parse_init_line[score_breakdown['initLineRobot3']]
+        'taxis': [
+            parse_taxi[score_breakdown['taxiRobot1']],
+            parse_taxi[score_breakdown['taxiRobot2']],
+            parse_taxi[score_breakdown['taxiRobot3']]
         ],
         'endgames': [
             parse_endgame[score_breakdown['endgameRobot1']],
@@ -49,29 +41,22 @@ def prune_alliance_score(score_breakdown):
             parse_endgame[score_breakdown['endgameRobot3']]
         ],
 
-        'cells': {
-            'bottom': {
-                'auto': score_breakdown['autoCellsBottom'],
-                'teleop': score_breakdown['teleopCellsBottom']
+        'cargo': {
+            'lower': {
+                'auto': sum([score_breakdown[f"autoCargoLower{i}"] for i in ["Near", "Far", "Blue", "Red"]]),
+                'teleop': sum([score_breakdown[f"teleopCargoLower{i}"] for i in ["Near", "Far", "Blue", "Red"]])
             },
-            'outer': {
-                'auto': score_breakdown['autoCellsOuter'],
-                'teleop': score_breakdown['teleopCellsOuter']
-            },
-            'inner': {
-                'auto': score_breakdown['autoCellsInner'],
-                'teleop': score_breakdown['teleopCellsInner']
+            'upper': {
+                'auto': sum([score_breakdown[f"autoCargoUpper{i}"] for i in ["Near", "Far", "Blue", "Red"]]),
+                'teleop': sum([score_breakdown[f"teleopCargoUpper{i}"] for i in ["Near", "Far", "Blue", "Red"]])
             }
         },
 
-        'max_stage': get_stage(score_breakdown),
-        
-        'endgame_level': score_breakdown['endgameRungIsLevel'] == 'IsLevel',
-
-        'rp': {
-            'shield_operational': score_breakdown['shieldOperationalRankingPoint'],
-            'shield_energized': score_breakdown['shieldEnergizedRankingPoint']
+        'rp_breakdown': {
+            'cargo_achieved': score_breakdown['cargoBonusRankingPoint'],
+            'hangar_achieved': score_breakdown['hangarBonusRankingPoint']
         },
+        'rp': score_breakdown['rp'],
 
         'foul_count': score_breakdown['foulCount'],
         'points_scored': score_breakdown['totalPoints'] - score_breakdown['foulPoints']

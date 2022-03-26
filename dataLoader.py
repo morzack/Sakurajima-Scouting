@@ -49,21 +49,20 @@ def load_data_event(event):
                 if played:
                     score_breakdown = alliance_data['score_breakdown']
                     
-                    data_dict[f"{alliance_color}_endgame_level"].append(score_breakdown['endgame_level'])
                     data_dict[f"{alliance_color}_foul_count"].append(score_breakdown['foul_count'])
                     data_dict[f"{alliance_color}_points_scored"].append(score_breakdown['points_scored'])
-                    data_dict[f"{alliance_color}_max_stage"].append(score_breakdown['max_stage'])
-                    data_dict[f"{alliance_color}_hang_rp"].append(score_breakdown['rp']['shield_operational'])
-                    data_dict[f"{alliance_color}_wheel_rp"].append(score_breakdown['rp']['shield_energized'])
+                    data_dict[f"{alliance_color}_rp"].append(score_breakdown['rp'])
+                    data_dict[f"{alliance_color}_cargo_rp"].append(score_breakdown['rp_breakdown']['cargo_achieved'])
+                    data_dict[f"{alliance_color}_hangar_rp"].append(score_breakdown['rp_breakdown']['hangar_achieved'])
                     
-                    for robot_num, init_line_points in enumerate(score_breakdown['init_lines']):
-                        data_dict[f"{alliance_color}_{robot_num+1}_init_line"].append(init_line_points)
+                    for robot_num, taxi_points in enumerate(score_breakdown['taxis']):
+                        data_dict[f"{alliance_color}_{robot_num+1}_taxi"].append(taxi_points)
                     for robot_num, endgame_points in enumerate(score_breakdown['endgames']):
                         data_dict[f"{alliance_color}_{robot_num+1}_endgame"].append(endgame_points)
                     
-                    for cell_placement in ['bottom', 'outer', 'inner']:
+                    for cargo_placement in ['lower', 'upper']:
                         for opmode in ['auto', 'teleop']:
-                            data_dict[f"{alliance_color}_cells_{cell_placement}_{opmode}"].append(score_breakdown['cells'][cell_placement][opmode])
+                            data_dict[f"{alliance_color}_cargo_{cargo_placement}_{opmode}"].append(score_breakdown['cargo'][cargo_placement][opmode])
                 
         df = pd.DataFrame(data=data_dict)
         return df
@@ -71,12 +70,10 @@ def load_data_event(event):
     def get_match_team_data_breakdown(match_data, alliance_color):
         return [
             match_data[f'{alliance_color}_points_scored'],
-            match_data[f'{alliance_color}_cells_bottom_auto'],
-            match_data[f'{alliance_color}_cells_bottom_teleop'],
-            match_data[f'{alliance_color}_cells_outer_auto'],
-            match_data[f'{alliance_color}_cells_outer_teleop'],
-            match_data[f'{alliance_color}_cells_inner_auto'],
-            match_data[f'{alliance_color}_cells_inner_teleop']
+            match_data[f'{alliance_color}_cargo_lower_auto'],
+            match_data[f'{alliance_color}_cargo_lower_teleop'],
+            match_data[f'{alliance_color}_cargo_upper_auto'],
+            match_data[f'{alliance_color}_cargo_upper_teleop']
         ]
 
     # get team data (like opr) into a dataframe
@@ -121,7 +118,7 @@ def load_data_event(event):
             team_scores.append(
                 [team] + get_match_team_data_breakdown(match, 'red') + [match[f'red_{i+1}_endgame']] + [match['match_number']]
             )
-    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'bottom_auto_cells', 'bottom_teleop_cells', 'outer_auto_cells', 'outer_teleop_cells', 'inner_auto_cells', 'inner_teleop_cells', 'endgame', 'match_number'])
+    team_scores = pd.DataFrame(team_scores, columns=['team_key', 'team_score', 'lower_auto_cargo', 'lower_teleop_cargo', 'upper_auto_cargo', 'upper_teleop_cargo', 'endgame', 'match_number'])
     team_scores = team_scores.sort_values(by=['team_key'])
 
     # get generic team data into a dataframe
@@ -131,18 +128,16 @@ def load_data_event(event):
             team,
             oprs.get(team, 0),
             np.mean(get_feature(team, team_scores, 'team_score')),
-            np.mean(get_feature(team, team_scores, 'bottom_auto_cells')),
-            np.mean(get_feature(team, team_scores, 'bottom_teleop_cells')),
-            np.mean(get_feature(team, team_scores, 'outer_auto_cells')),
-            np.mean(get_feature(team, team_scores, 'outer_teleop_cells')),
-            np.mean(get_feature(team, team_scores, 'inner_auto_cells')),
-            np.mean(get_feature(team, team_scores, 'inner_teleop_cells')),
+            np.mean(get_feature(team, team_scores, 'lower_auto_cargo')),
+            np.mean(get_feature(team, team_scores, 'lower_teleop_cargo')),
+            np.mean(get_feature(team, team_scores, 'upper_auto_cargo')),
+            np.mean(get_feature(team, team_scores, 'upper_teleop_cargo')),
             np.mean(get_feature(team, team_scores, 'endgame'))
         ])
-    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_bottom_auto_cells', 'mean_bottom_teleop_cells', 'mean_outer_auto_cells', 'mean_outer_teleop_cells', 'mean_inner_auto_cells', 'mean_inner_teleop_cells', 'mean_endgame'])
+    team_data = pd.DataFrame(team_data, columns=['team_key', 'opr', 'mean_score', 'mean_lower_auto_cargo', 'mean_lower_teleop_cargo', 'mean_upper_auto_cargo', 'mean_upper_teleop_cargo', 'mean_endgame'])
     team_data.sort_values(by=['mean_score'])
 
-    opr_features = ['points_scored', 'cells_bottom_auto', 'cells_bottom_teleop', 'cells_inner_auto', 'cells_inner_teleop', 'cells_outer_auto', 'cells_outer_teleop']
+    opr_features = ['points_scored', 'cargo_lower_auto', 'cargo_lower_teleop', 'cargo_upper_auto', 'cargo_upper_teleop']
 
     # get component opr into a dataframe
     team_component_opr_data = []
@@ -171,10 +166,8 @@ def load_data_event(event):
 def normalize_opr(i):
     # helper functionto normalize OPRs to point values
     team_component_opr_normalized = i.copy(deep=True)
-    team_component_opr_normalized['cells_bottom_auto'] *= 2
-    team_component_opr_normalized['cells_bottom_teleop'] *= 1
-    team_component_opr_normalized['cells_inner_auto'] *= 6
-    team_component_opr_normalized['cells_inner_teleop'] *= 3
-    team_component_opr_normalized['cells_outer_auto'] *= 4
-    team_component_opr_normalized['cells_outer_teleop'] *= 2
+    team_component_opr_normalized['cargo_lower_auto'] *= 2
+    team_component_opr_normalized['cargo_lower_teleop'] *= 1
+    team_component_opr_normalized['cargo_upper_auto'] *= 4
+    team_component_opr_normalized['cargo_upper_teleop'] *= 2
     return team_component_opr_normalized
