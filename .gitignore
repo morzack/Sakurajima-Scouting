@@ -2,8 +2,8 @@
 secret.json
 config.json
 
-data*/*
-plots/*
+data*/
+plots/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
