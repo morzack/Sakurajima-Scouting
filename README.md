@@ -7,3 +7,20 @@ It also provides match prediction models that can be run throughout an event, as
 This is intended to be run w/ python3.9.x
 
 The TBA wrapper that this uses is [1418's wrapper](https://github.com/frc1418/tbapy).
+
+## usage
+
+### sourcing data
+
+assuming you have a tba acct + api key set up:
+
+```bash
+cd scripts
+python download_data.py --tba-secret $YOUR_SECRET_HERE --year 2023 --week 1 --smart-download
+```
+
+replace `2023` and `1` with respective values
+
+use `--help` to get more info on the cmd
+
+### building models
