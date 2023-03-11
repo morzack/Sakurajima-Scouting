@@ -1,2 +1,5 @@
 tbapy
 rich
+scipy
+matplotlib
+seaborn

@@ -241,7 +241,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--week", help="week to run download script for", dest="week", required=False)
     parser.add_argument("--output-folder", help="output destination for downloads",
-                        dest="output_folder", default="data_downloads")
+                        dest="output_folder", default="data")
     parser.add_argument("--metadata-cache", help="tba metadata cache file",
                         dest="cache_file", required=False, default=".tba_cache.json")
     parser.add_argument("--skip-metadata-caching", help="skip caching tba metadata",
