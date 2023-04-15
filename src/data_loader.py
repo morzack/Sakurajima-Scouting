@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import numpy as np
+import ast
 
 import src.stat_utils as stat_utils
 
@@ -217,6 +218,10 @@ class DataLoader2022(DataLoader):
 
 
 class DataLoader2023(DataLoader):
+    def __init__(self):
+        self.opr_features = ['points_scored', 'piece_low_auto', 'piece_mid_auto',
+                        'piece_high_auto', 'piece_low_teleop', 'piece_mid_teleop', 'piece_high_teleop']
+
     def flatten_data_matches(self, matches, played=True):
         data_dict = defaultdict(list)
 
@@ -372,15 +377,13 @@ class DataLoader2023(DataLoader):
                                                      'mean_links_scored', 'mean_links_scored_std', 'mean_auto_mobility', 'mean_auto_mobility_std', 'mean_endgame_park', 'mean_endgame_park_std'])
         team_data.sort_values(by=['mean_score'])
 
-        opr_features = ['points_scored', 'piece_low_auto', 'piece_mid_auto',
-                        'piece_high_auto', 'piece_low_teleop', 'piece_mid_teleop', 'piece_high_teleop']
 
         # get component opr into a dataframe
         team_component_opr_data = []
         for i, team in enumerate(teams):
             adding = [
                 team, team_scores.loc[team_scores['team_key'] == team].shape[0]]
-            for feature in opr_features:
+            for feature in self.opr_features:
                 opr_prediction, std = stat_utils.residual_team(
                     team, qualification_matches, teams, feature)
                 adding += [opr_prediction, std]
@@ -404,12 +407,121 @@ class DataLoader2023(DataLoader):
             team_component_opr_data.append(adding)
 
         column_names = ['team_key', 'matches_played']
-        for i in opr_features:
+        for i in self.opr_features:
             column_names += [f'{i}', f'{i}_std']
-        column_names += ['mean_links_scored', 'mean_links_scored_std', 'mean_auto_mobility', 'mean_auto_mobility_std', 'mean_endgame_park', 'mean_endgame_park_std', 'mean_score']
+        column_names += ['mean_links_scored', 'mean_links_scored_std', 'mean_auto_mobility',
+                         'mean_auto_mobility_std', 'mean_endgame_park', 'mean_endgame_park_std', 'mean_score']
 
         team_component_opr_data = pd.DataFrame(
             team_component_opr_data, columns=column_names)
         team_component_opr_data.sort_values(by='points_scored')
 
         return qualification_matches, qualification_matches_unplayed, team_scores, team_data, team_component_opr_data
+
+
+class PerTeamDataLoader:
+    # usage example:
+    # importlib.reload(src.data_loader)
+    # ld = src.data_loader.PerTeamDataLoader("data")
+
+    # qms, oprs = ld.load_filtered_event_data("ncjoh", 30)
+    # oprs
+    
+    def __init__(self, data_folder):
+        self.qm = pd.read_csv(f'{data_folder}/cache/qualification-matches.csv', converters={"red_keys":ast.literal_eval, "blue_keys":ast.literal_eval})
+        self.opr_features = ['points_scored', 'piece_low_auto', 'piece_mid_auto',
+                        'piece_high_auto', 'piece_low_teleop', 'piece_mid_teleop', 'piece_high_teleop']
+
+
+    def get_team_matches(self, team_key=None, events=None, played_before=None):
+        # get all matches (rows) where a team played
+        # filter matches to only include those from events (if provided) and played before some mathc # (if provided)
+        if team_key is None and events is None and played_before is None:
+            raise Exception("yabe")
+        
+        matches_played = self.qm
+
+        if team_key is not None:
+            matches_played = self.qm.loc[
+                (team_key == self.qm["blue_1_key"]) |
+                (team_key == self.qm["blue_2_key"]) |
+                (team_key == self.qm["blue_3_key"]) |
+                (team_key == self.qm["red_1_key"]) |
+                (team_key == self.qm["red_2_key"]) |
+                (team_key == self.qm["red_3_key"])
+            ]
+
+        if events is not None:
+            filtered = [matches_played[matches_played["match_key"].str.contains(
+                event)] for event in events]
+            matches_played = pd.concat(filtered).drop_duplicates(subset=["match_key"])
+
+        if played_before is not None:
+            matches_played = matches_played.loc[matches_played["match_number"]
+                                                <= played_before]
+
+        return matches_played.reset_index(drop=True)
+    
+    def get_mean_std_team_feature(self, team_key, matches_observing, feature, key_specific=False):
+        # get the mean and std vals for some feature of a team's performance in matches_observing
+        vals = []
+        for _, row in matches_observing.iterrows():
+            if team_key in row["red_keys"]:
+                if not key_specific:
+                    vals.append(row[f"red_{feature}"])
+                    continue
+                for i, tk in enumerate(row["red_keys"]):
+                    if tk == team_key:
+                        vals.append(row[f"red_{i+1}_{feature}"])
+                        break
+            if team_key in row["blue_keys"]:
+                if not key_specific:
+                    vals.append(row[f"blue_{feature}"])
+                    continue
+                for i, tk in enumerate(row["blue_keys"]):
+                    if tk == team_key:
+                        vals.append(row[f"blue_{i+1}_{feature}"])
+                        break
+        return np.mean(vals), np.std(vals, ddof=0)
+
+    def calculate_teams_oprs_from_matches(self, team_keys, matches_observing):
+        team_component_opr_data = []
+        for i, team in enumerate(team_keys):
+            adding = [team] 
+            for feature in self.opr_features:
+                opr_prediction, std = stat_utils.residual_team(
+                    team, matches_observing, team_keys, feature)
+                adding += [opr_prediction, std]
+            links_scored = self.get_mean_std_team_feature(team, matches_observing, "links_scored")
+            auto_mobility = self.get_mean_std_team_feature(team, matches_observing, "auto_mobility", True)
+            endgame_park = self.get_mean_std_team_feature(team, matches_observing, "endgame_park", True)
+            score = self.get_mean_std_team_feature(team, matches_observing, "points_scored")
+            adding += [
+                links_scored[0], links_scored[1],
+                auto_mobility[0], auto_mobility[1],
+                endgame_park[0], endgame_park[1],
+                score[0], score[1]
+            ]
+
+            team_component_opr_data.append(adding)
+
+        column_names = ['team_key']
+        for i in self.opr_features:
+            column_names += [f'{i}', f'{i}_std']
+        column_names += ['mean_links_scored', 'mean_links_scored_std', 'mean_auto_mobility',
+                         'mean_auto_mobility_std', 'mean_endgame_park', 'mean_endgame_park_std', 'mean_score', "mean_score_std"]
+
+        team_component_opr_data = pd.DataFrame(
+            team_component_opr_data, columns=column_names)
+        team_component_opr_data.sort_values(by='points_scored')
+        team_component_opr_data.reset_index(drop=True)
+        return team_component_opr_data
+    
+    def load_filtered_event_data(self, event, played_before=None):
+        qms = self.get_team_matches(events=[event], played_before=played_before)
+        teams_looking_at = set()
+        for _, match in qms.iterrows():
+            teams_in_match = match["red_keys"] + match["blue_keys"]
+            teams_looking_at |= set(teams_in_match)
+        oprs = self.calculate_teams_oprs_from_matches(list(teams_looking_at), qms)
+        return qms.fillna(0), oprs.fillna(0) # TODO fillna is probably sus

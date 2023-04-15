@@ -224,7 +224,13 @@ def cute_download_events(tba_client: CachedTbaClient, year_parser, to_download):
         for event in struct["events"]:
             events_flattened.append((struct["path"], event))
 
-    cute_execute(lambda x: download_event_data(tba_client, year_parser, x[1], output_folder=x[0]),
+    def _event_download_try_wrapper(tba_client, year_parser, x, output_folder):
+        try:
+            download_event_data(tba_client, year_parser, x, output_folder=output_folder)
+        except Exception as e:
+            print("oops, i failed to download an event tehe :P")
+
+    cute_execute(lambda x: _event_download_try_wrapper(tba_client, year_parser, x[1], output_folder=x[0]),
                  lambda x: f"getting {x[1]}",
                  events_flattened,
                  "downloading event data :) ...")
